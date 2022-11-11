@@ -6,6 +6,7 @@ import Dashboard from '../pages/Dashboard';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import Deposit from '../pages/Deposit';
+import Support from '../pages/Support';
 
 function Router() {
     return useRoutes([
@@ -20,6 +21,10 @@ function Router() {
                 {
                     path : "/deposits",
                     element: <Deposit/>
+                },
+                {
+                    path: "/support",
+                    element: <Support />
                 }
             ]
         },

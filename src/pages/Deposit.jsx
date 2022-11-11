@@ -20,7 +20,7 @@ function Deposit() {
                             <Card.Subtitle className="mb-2 text-muted">Topup Account</Card.Subtitle>
                             <Card.Body>
                                 <InputGroup size="lg">
-                                    <Form.Control aria-label="Dollar amount (with dot and two decimal places)" />
+                                    <Form.Control />
                                     <InputGroup.Text>USD</InputGroup.Text>
                                 </InputGroup>
                                 <p>Choose Payment Method</p>
