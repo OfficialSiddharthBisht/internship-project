@@ -1,10 +1,9 @@
+import React from 'react';
 import './App.css';
-
+import Router from './routes';
 function App() {
   return (
-    <div className="App">
-      <h1>Label Falcon</h1>
-    </div>
+    <Router />
   );
 }
 
