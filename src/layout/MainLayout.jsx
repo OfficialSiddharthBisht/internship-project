@@ -124,8 +124,7 @@ export default function MainLayout() {
                         closeMobileMenuRef.current.click();
                       }}
                     >
-                      <div style={{ marginLeft: "0.4rem" }}>{singleMenu.icon}</div>
-
+                      <img src= {singleMenu.icon} alt="" />
                       <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
                         {singleMenu.name}
                       </p>
@@ -171,9 +170,10 @@ export default function MainLayout() {
               </a>
 
               <div style={{ marginTop: "2rem" }}>
-                {menus.map((singleMenu) => {
+                {menus.map((singleMenu,index) => {
                   return (
                     <div
+                      key={index}
                       className={
                         selectedMenu.name == singleMenu.name
                           ? "d-flex align-items-center bg-primary p-2 rounded text-white mb-2 cp"
