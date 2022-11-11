@@ -7,6 +7,7 @@ import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import Deposit from '../pages/Deposit';
 import Support from '../pages/Support';
+import FAQ from '../pages/FAQ';
 
 function Router() {
     return useRoutes([
@@ -25,6 +26,10 @@ function Router() {
                 {
                     path: "/support",
                     element: <Support />
+                },
+                {
+                    path: "/faq",
+                    element: <FAQ />
                 }
             ]
         },
