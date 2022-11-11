@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRoutes } from 'react-router-dom';
+import { Navigate,useRoutes } from 'react-router-dom';
 import AuthMainLayout from '../layout/AuthMainLayout';
 import MainLayout from '../layout/MainLayout';
 import Dashboard from '../pages/Dashboard';
@@ -8,6 +8,7 @@ import Signup from '../pages/Signup';
 import Deposit from '../pages/Deposit';
 import Support from '../pages/Support';
 import FAQ from '../pages/FAQ';
+import Page_404 from '../pages/common/Page_404';
 
 function Router() {
     return useRoutes([
@@ -30,7 +31,7 @@ function Router() {
                 {
                     path: "/faq",
                     element: <FAQ />
-                }
+                },
             ]
         },
         {
@@ -46,7 +47,9 @@ function Router() {
                     element: <Login />
                 },
             ]
-        }
+        },
+        {path : "/404", element: <Page_404 />},
+        { path: "*", element: <Navigate to="/404" replace /> }
     ])
 };
 
