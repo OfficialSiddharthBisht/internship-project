@@ -27,52 +27,32 @@ export default function MainLayout() {
     {
       name: "Dashboard",
       link: "/dashboard",
-      icon: <i class="fa-solid fa-gauge"></i>,
+      icon: "./static/icons/dashboardIcon.png",
     },
     {
-      name: "Orders",
+      name: "My Labels",
       link: "/orders",
-      icon: <i class="fa-solid fa-bars"></i>,
+      icon: "./static/icons/label.png",
     },
     {
-      name: "Books",
+      name: "Deposit",
       link: "/books",
-      icon: <i class="fa-solid fa-book"></i>,
+      icon: "./static/icons/deposit.png"
     },
     {
-      name: "Catalogue",
+      name: "Profile",
       link: "/catalogue",
-      icon: <i class="fa-solid fa-book"></i>,
+      icon: "./static/icons/profile.png",
     },
     {
-      name: "Categories",
+      name: "Support",
       link: "/categories",
-      icon: <i class="fa-solid fa-table-cells-large"></i>,
+      icon: "./static/icons/support.png",
     },
     {
-      name: "Tickets",
+      name: "FAQ",
       link: "/tickets",
-      icon: <i class="fa-solid fa-ticket"></i>,
-    },
-    {
-      name: "Coupons",
-      link: "/coupons",
-      icon: <i class="fa-solid fa-tag"></i>,
-    },
-    {
-      name: "Workers",
-      link: "/workers",
-      icon: <i class="fa-solid fa-user-nurse"></i>,
-    },
-    {
-      name: "Users",
-      link: "/users",
-      icon: <i class="fa-solid fa-user"></i>,
-    },
-    {
-      name: "Website Settings",
-      link: "/settings",
-      icon: <i class="fa-solid fa-gear"></i>,
+      icon: "./static/icons/faq.png",
     },
   ]);
 
@@ -90,7 +70,7 @@ export default function MainLayout() {
                 navigate("/");
               }}
             >
-              <img src="./static/images/logo.svg" alt="Logo" className="img-fluid" style={{ maxWidth: "15rem" }} />
+              <img src="./static/icons/logo.png" alt="Logo" className="img-fluid" style={{ maxWidth: "2rem" }} />
             </a>
           </div>
 
@@ -183,7 +163,7 @@ export default function MainLayout() {
         <div className="d-lg-none">{mobileMenu()}</div>
 
         <nav className="d-none d-lg-block" style={{ position: "fixed" }}>
-          <div style={{ display: "flex", flexDirection: "column", minWidth: "275px", minHeight: "100vh", backgroundColor: "#f4f4f4" }}>
+          <div style={{ display: "flex", flexDirection: "column", minWidth: "275px", minHeight: "100vh" }}>
             <div className="p-4">
               <a href="/">
                 <img className="zi-2" src="/static/icons/logo.png" alt="LabelFalcon" style={{ width: "2rem" }} />
@@ -204,10 +184,10 @@ export default function MainLayout() {
                         navigate(singleMenu.link);
                       }}
                     >
-                      <div style={{ marginLeft: "0.4rem" }}>{singleMenu.icon}</div>
-
+                      {/* {singleMenu.icon} */}
+                      <img src= {singleMenu.icon} alt="" />
                       <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
-                        {singleMenu.name}
+                       {singleMenu.name}
                       </p>
                     </div>
                   );
@@ -221,7 +201,7 @@ export default function MainLayout() {
               <Avatar name={me?.email} size="35" round={true} color={"#cd5237"} />
 
               <h6 className="text-light" style={{ marginLeft: "0.6rem", marginTop: "0.5rem" }}>
-                {me?.email}
+                Create New Lablel
               </h6>
             </div>
           </div>
