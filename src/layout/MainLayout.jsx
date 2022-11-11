@@ -26,32 +26,32 @@ export default function MainLayout() {
   const [menus, setmenus] = useState([
     {
       name: "Dashboard",
-      link: "/dashboard",
+      link: "/",
       icon: "./static/icons/dashboardIcon.png",
     },
     {
       name: "My Labels",
-      link: "/orders",
+      link: "/labels",
       icon: "./static/icons/label.png",
     },
     {
       name: "Deposit",
-      link: "/books",
+      link: "/deposits",
       icon: "./static/icons/deposit.png"
     },
     {
       name: "Profile",
-      link: "/catalogue",
+      link: "/profile",
       icon: "./static/icons/profile.png",
     },
     {
       name: "Support",
-      link: "/categories",
+      link: "/support",
       icon: "./static/icons/support.png",
     },
     {
       name: "FAQ",
-      link: "/tickets",
+      link: "/faq",
       icon: "./static/icons/faq.png",
     },
   ]);
