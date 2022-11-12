@@ -11,6 +11,7 @@ import FAQ from '../pages/FAQ';
 import Page_404 from '../pages/common/Page_404';
 import Profile from '../pages/Profile';
 import Labels from '../pages/Labels';
+import NewLabel from '../pages/NewLabel';
 
 function Router() {
     return useRoutes([
@@ -41,6 +42,10 @@ function Router() {
                 {
                     path: "/labels",
                     element: <Labels />
+                },
+                {
+                    path: "/newLabel",
+                    element: <NewLabel />
                 }
             ]
         },

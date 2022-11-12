@@ -25,6 +25,11 @@ export default function MainLayout() {
 
   const [menus, setmenus] = useState([
     {
+      name: "New Label",
+      link: "/newLabel",
+      icon: "./static/icons/newLable.png",
+    },
+    {
       name: "Dashboard",
       link: "/",
       icon: "./static/icons/dashboardIcon.png",
@@ -168,7 +173,7 @@ export default function MainLayout() {
                 <img className="zi-2" src="/static/icons/logo.png" alt="LabelFalcon" style={{ width: "2rem" }} />
                 LABELFALCON
               </a>
-
+              <hr />
               <div style={{ marginTop: "2rem" }}>
                 {menus.map((singleMenu,index) => {
                   return (
@@ -188,6 +193,7 @@ export default function MainLayout() {
                       <img src= {singleMenu.icon} alt="" />
                       <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
                        {singleMenu.name}
+                       <br /> 
                       </p>
                     </div>
                   );
