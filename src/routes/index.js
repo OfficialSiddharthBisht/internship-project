@@ -10,6 +10,7 @@ import Support from '../pages/Support';
 import FAQ from '../pages/FAQ';
 import Page_404 from '../pages/common/Page_404';
 import Profile from '../pages/Profile';
+import Labels from '../pages/Labels';
 
 function Router() {
     return useRoutes([
@@ -37,6 +38,10 @@ function Router() {
                     path: "/profile",
                     element: <Profile />
                 },
+                {
+                    path: "/labels",
+                    element: <Labels />
+                }
             ]
         },
         {
