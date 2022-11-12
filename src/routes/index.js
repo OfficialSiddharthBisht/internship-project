@@ -9,6 +9,7 @@ import Deposit from '../pages/Deposit';
 import Support from '../pages/Support';
 import FAQ from '../pages/FAQ';
 import Page_404 from '../pages/common/Page_404';
+import Profile from '../pages/Profile';
 
 function Router() {
     return useRoutes([
@@ -31,6 +32,10 @@ function Router() {
                 {
                     path: "/faq",
                     element: <FAQ />
+                },
+                {
+                    path: "/profile",
+                    element: <Profile />
                 },
             ]
         },
