@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,6 +8,32 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
 function Profile() {
+    const [profileInfo, setProfileInfo] = useState([
+        {
+            info: "Username",
+            icon: "./static/icons/username.png",
+        },
+        {
+            info: "Email",
+            icon: "./static/icons/email.png",
+        },
+        {
+            info: "Discord",
+            icon: "./static/icons/discord2.png",
+        },
+        {
+            info: "Telegram",
+            icon: "./static/icons/telegram2.png",
+        },
+        {
+            info: "Balance",
+            icon: "./static/icons/balance2.png",
+        },
+        {
+            info: "Joined",
+            icon: "./static/icons/joined.png",
+        },
+    ])
     return (
         <>
             <Container>
@@ -17,90 +43,26 @@ function Profile() {
                             <Card.Body>
                                 <Card.Title>Profile Information</Card.Title>
                                 <Card.Text>
-                                    <Col>
-                                        <InputGroup size="sm" className="mb-3">
-                                            <img src="./static/icons/username.png" alt="" width={"45px"} style={{ margin: "10px" }} />
-                                            <FloatingLabel
-                                                controlId="floatingInput"
-                                                label="Username"
-                                                className="mb-3"
-                                            >
-                                                <Form.Control aria-label="Small"
-                                                    aria-describedby="inputGroup-sizing-sm"
-                                                    type="text" placeholder="Siddharth Bisht" />
-                                            </FloatingLabel>
-                                        </InputGroup>
-                                    </Col>
-                                    <Col>
-                                        <InputGroup size="sm" className="mb-3">
-                                            <img src="./static/icons/email.png" alt="" width={"45px"} style={{ margin: "10px" }} />
-                                            <FloatingLabel
-                                                controlId="floatingInput"
-                                                label="Email"
-                                                className="mb-3"
-                                            >
-                                                <Form.Control aria-label="Small"
-                                                    aria-describedby="inputGroup-sizing-sm"
-                                                    type="email" placeholder="siddharth@flamecloud.co.uk" />
-                                            </FloatingLabel>
-                                        </InputGroup>
-                                    </Col>
-                                    <Col>
-                                        <InputGroup size="sm" className="mb-3">
-                                            <img src="./static/icons/discord2.png" alt="" width={"45px"} style={{ margin: "10px" }} />
-                                            <FloatingLabel
-                                                controlId="floatingInput"
-                                                label="Discord"
-                                                className="mb-3"
-                                            >
-                                                <Form.Control aria-label="Small"
-                                                    aria-describedby="inputGroup-sizing-sm"
-                                                    type="text" placeholder="user-discord" />
-                                            </FloatingLabel>
-                                        </InputGroup>
-                                    </Col>
-                                    <Col>
-                                        <InputGroup size="sm" className="mb-3">
-                                            <img src="./static/icons/telegram2.png" alt="" width={"45px"} style={{ margin: "10px" }} />
-                                            <FloatingLabel
-                                                controlId="floatingInput"
-                                                label="Telegram"
-                                                className="mb-3"
-                                            >
-                                                <Form.Control aria-label="Small"
-                                                    aria-describedby="inputGroup-sizing-sm"
-                                                    type="text" placeholder="user-telegram" />
-                                            </FloatingLabel>
-                                        </InputGroup>
-                                    </Col>
-                                    <Col>
-                                        <InputGroup size="sm" className="mb-3">
-                                            <img src="./static/icons/balance2.png" alt="" width={"45px"} style={{ margin: "10px" }} />
-                                            <FloatingLabel
-                                                controlId="floatingInput"
-                                                label="Balance"
-                                                className="mb-3"
-                                            >
-                                                <Form.Control aria-label="Small"
-                                                    aria-describedby="inputGroup-sizing-sm"
-                                                    type="text" placeholder="$00" />
-                                            </FloatingLabel>
-                                        </InputGroup>
-                                    </Col>
-                                    <Col>
-                                        <InputGroup size="sm" className="mb-3">
-                                            <img src="./static/icons/joined.png" alt="" width={"45px"} style={{ margin: "10px" }} />
-                                            <FloatingLabel
-                                                controlId="floatingInput"
-                                                label="Joined"
-                                                className="mb-3"
-                                            >
-                                                <Form.Control aria-label="Small"
-                                                    aria-describedby="inputGroup-sizing-sm"
-                                                    type="text" placeholder="21/07/2000" />
-                                            </FloatingLabel>
-                                        </InputGroup>
-                                    </Col>
+                                    {
+                                        profileInfo.map((el, index) => {
+                                            return (
+                                                <Col>
+                                                    <InputGroup size="sm" className="mb-3">
+                                                        <img src={el.icon} alt="" width={"45px"} height={"45px"} style={{ margin: "8px"}} />
+                                                        <FloatingLabel
+                                                            controlId="floatingInput"
+                                                            label={el.info}
+                                                            className="mb-3"
+                                                        >
+                                                            <Form.Control aria-label="Small"
+                                                                aria-describedby="inputGroup-sizing-sm"
+                                                                type="text" placeholder={el.info} />
+                                                        </FloatingLabel>
+                                                    </InputGroup>
+                                                </Col>
+                                            )
+                                        })
+                                    }
                                     <br />
                                     <Row>
                                         <Col style={{ border: "1px solid grey", borderRadius: "5px" }}>
