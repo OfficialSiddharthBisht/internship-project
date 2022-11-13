@@ -1,0 +1,11 @@
+.dark-mode {
+    background-color: #0F0F0F;
+    color: #ABABAB;
+    transition: background-color 0.25s ease-in-out;
+  }
+.sideNavDark{
+    background-color:  #181818;
+    color: #ABABAB;
+    font-weight: bolder;
+    font-family: 'Inter';
+}

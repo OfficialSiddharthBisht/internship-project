@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Router from './routes';
 function App() {
+  const [darkMode, setDarkMode] = useState("true");
   return (
-    <Router />
+    <div className= {darkMode ?"dark-mode":"light-mode"}>
+      <Router />
+    </div>
   );
 }
 

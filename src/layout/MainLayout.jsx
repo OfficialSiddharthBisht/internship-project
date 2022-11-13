@@ -66,7 +66,7 @@ export default function MainLayout() {
   const mobileMenu = () => {
     return (
       <>
-        <div className="d-flex align-items-center container w-100 p-3">
+        <div className="d-flex align-items-center container w-100 p-3 sideNavDark">
           <div className="flex-fill ms-2">
             <a
               className="navbar-brand"
@@ -166,7 +166,7 @@ export default function MainLayout() {
       <div className={isMobile ? "" : "d-flex"}>
         <div className="d-lg-none">{mobileMenu()}</div>
 
-        <nav className="d-none d-lg-block" style={{ position: "fixed" }}>
+        <nav className="d-none d-lg-block sideNavDark" style={{ position: "fixed" }}>
           <div style={{ display: "flex", flexDirection: "column", minWidth: "275px", minHeight: "100vh" }}>
             <div className="p-4">
               <a href="/">
