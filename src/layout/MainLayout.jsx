@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import Avatar from "react-avatar";
 import { Outlet, useNavigate } from "react-router-dom";
-
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 export default function MainLayout() {
   const navigate = useNavigate();
   const [isMobile, setisMobile] = useState(false);
@@ -129,7 +132,7 @@ export default function MainLayout() {
                         closeMobileMenuRef.current.click();
                       }}
                     >
-                      <img src= {singleMenu.icon} alt="" />
+                      <img src={singleMenu.icon} alt="" />
                       <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
                         {singleMenu.name}
                       </p>
@@ -170,19 +173,18 @@ export default function MainLayout() {
           <div style={{ display: "flex", flexDirection: "column", minWidth: "275px", minHeight: "100vh" }}>
             <div className="p-4">
               <a href="/">
-                <img className="zi-2" src="/static/icons/logo.png" alt="LabelFalcon" style={{ width: "2rem" }} />
-                LABELFALCON
+                <img src="./static/icons/theLogo.png" alt="" />
               </a>
               <hr />
               <div style={{ marginTop: "2rem" }}>
-                {menus.map((singleMenu,index) => {
+                {menus.map((singleMenu, index) => {
                   return (
                     <div
                       key={index}
                       className={
                         selectedMenu.name == singleMenu.name
-                          ? "d-flex align-items-center bg-primary p-2 rounded text-white mb-2 cp"
-                          : "d-flex align-items-center menu p-2 rounded text-dark mb-2 cp"
+                          ? "d-flex align-items-center bg-primary p-2 rounded mb-2 cp"
+                          : "d-flex align-items-center menu p-2 rounded mb-2 cp"
                       }
                       onClick={() => {
                         setselectedMenu(singleMenu);
@@ -190,26 +192,18 @@ export default function MainLayout() {
                       }}
                     >
                       {/* {singleMenu.icon} */}
-                      <img src= {singleMenu.icon} alt="" />
+                      <img src={singleMenu.icon} alt="" />
                       <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
-                       {singleMenu.name}
-                       <br /> 
+                        {singleMenu.name}
+                        <br />
                       </p>
                     </div>
                   );
                 })}
               </div>
             </div>
-
-            <div className="flex-fill"></div>
-
-            <div className="bg-dark p-3 d-flex align-items-center">
-              <Avatar name={me?.email} size="35" round={true} color={"#cd5237"} />
-
-              <h6 className="text-light" style={{ marginLeft: "0.6rem", marginTop: "0.5rem" }}>
-                Create New Lablel
-              </h6>
-            </div>
+            <img src="./static/icons/balanceNav.png" alt="" width={"80%"} style={{ margin: "auto" }} />
+            <img src="./static/icons/create.png" alt="" width={"80%"} style={{ margin: "auto" }} />
           </div>
         </nav>
 
