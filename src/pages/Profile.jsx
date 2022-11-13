@@ -81,7 +81,7 @@ function Profile() {
                         <Row>
                             <Col>
                                 <Card>
-                                    <Card.Body>
+                                    <Card.Body className='card-body'>
                                         <Card.Title>Profile Information</Card.Title>
                                         <Card.Text>
                                             <Form>
@@ -107,7 +107,7 @@ function Profile() {
                             <Col>
                                 <Card style={{ alignItems: "center" }}>
                                     <img src="./static/icons/discord2.png" height={"70px"} width={"70px"} />
-                                    <Card.Body>
+                                    <Card.Body className='card-body'>
                                         <Card.Title>Login with Discord</Card.Title>
                                         <Card.Text>
                                             After that it will be <br /> linked to your account
@@ -125,7 +125,7 @@ function Profile() {
                             <Col>
                                 <Card style={{ alignItems: "center" }}>
                                     <img src="./static/icons/telegram2.png" height={"70px"} width={"70px"} />
-                                    <Card.Body>
+                                    <Card.Body className='card-body'>
                                         <Card.Title>Login with Telegram</Card.Title>
                                         <Card.Text>
                                             After that it will be <br /> linked to your account

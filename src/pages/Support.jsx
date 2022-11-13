@@ -16,7 +16,7 @@ function Support() {
                 <Row>
                     <Col>
                         <Card>
-                            <Card.Body>
+                            <Card.Body className='card-body'>
                                 <Card.Title>Open Support Ticket</Card.Title>
                                 <Card.Text>
                                     {/* <Form.Label>Title</Form.Label> */}
@@ -44,7 +44,7 @@ function Support() {
                     </Col>
                     <Col>
                         <Card style={{minHeight:"600px",minWidth:"50vw"}}>
-                            <Card.Body>
+                            <Card.Body className='card-body'>
                                 <Card.Title>Support History</Card.Title>
                                 <Card.Text>
                                     <Row>

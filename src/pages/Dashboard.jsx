@@ -83,7 +83,7 @@ function Dashboard() {
         <Row>
           <Col>
             <Card>
-              <Card.Body>
+              <Card.Body className='card-body'>
                 <Card.Title>Recent Deposits</Card.Title>
                 <Table striped bordered hover>
                   <thead>
@@ -119,7 +119,7 @@ function Dashboard() {
           </Col>
           <Col>
             <Card>
-              <Card.Body>
+              <Card.Body className='card-body'>
                 <Card.Title>Support</Card.Title>
                 <Container>
                   <Row>
@@ -137,7 +137,7 @@ function Dashboard() {
                     <Col>
                       <Row>
                         <Card>
-                          <Card.Body>
+                          <Card.Body className='card-body'>
                             <Card.Text>
                               <Row>
                                 <Col> <img src="./static/icons/discord.png" alt="" /> </Col>
@@ -152,7 +152,7 @@ function Dashboard() {
                       </Row>
                       <Row>
                         <Card>
-                          <Card.Body>
+                          <Card.Body className='card-body'>
                             <Card.Text>
                               <Row>
                                 <Col> <img src="./static/icons/telegram.png" alt="" /> </Col>

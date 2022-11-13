@@ -12,7 +12,7 @@ function Labels() {
         <>
             <h2>Labels History</h2>
             <Card>
-                <Card.Body>
+                <Card.Body className='card-body'>
                     <Card.Text>
                         <Table striped bordered hover>
                             <tbody>
