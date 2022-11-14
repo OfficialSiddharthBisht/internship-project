@@ -17,6 +17,7 @@ function ConfirmLogout() {
                         <Col style={{ marginLeft: "35%" }}>
                             <Button 
                                 style={{ background: "#E65425" }}
+                                className='border-0'
                                 onClick={()=>{
                                     navigate("/login");
                                 }}

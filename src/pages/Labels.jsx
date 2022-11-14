@@ -51,16 +51,16 @@ function Labels() {
                     <Card.Footer width={"100%"} className="text-muted">
                         <Row>
                             <Col style={{borderRadius: "5px" }}>
-                                <Button variant="light">You choose (2) files</Button>{' '}
+                                <Button className='border-0' variant="light">You choose (2) files</Button>{' '}
                             </Col>
                             <Col style={{ marginLeft: "20%" }}>
-                                <Button style={{ background: "#E65425" }}>Download as ZIP</Button>
+                                <Button className='border-0' style={{ background: "#E65425" }}>Download as ZIP</Button>
                             </Col>
                             <Col>
                                 <small>or</small>
                             </Col>
                             <Col>
-                                <Button variant="light" style={{ border: "1px solid #E65425", color: "#E65425" }}>Download as PDF</Button>
+                                <Button className='border-0' variant="light" style={{ border: "1px solid #E65425", color: "#E65425" }}>Download as PDF</Button>
                             </Col>
                         </Row>
                     </Card.Footer>

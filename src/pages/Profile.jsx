@@ -63,10 +63,10 @@ function Profile() {
                                     <Row>
                                         <Col style={{borderRadius: "5px" }}>
                                             <img src="./static/icons/trush.png" alt="" width={"30px"} style={{ margin: "2px" }} />
-                                            <Button variant="light">Delete Account</Button>{' '}
+                                            <Button className='border-0' variant="light">Delete Account</Button>{' '}
                                         </Col>
                                         <Col style={{ marginLeft: "20%" }}>
-                                            <Button style={{ background: "#E65425" }}>Save Changes</Button>
+                                            <Button className='border-0' style={{ background: "#E65425" }}>Save Changes</Button>
                                         </Col>
                                     </Row>
                                 </Card.Text>
@@ -91,7 +91,7 @@ function Profile() {
                                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                                     <Form.Control className='border-0' type="password" placeholder="Repeat Password" />
                                                 </Form.Group>
-                                                <Button style={{ background: "#E65425" }}>Save Changes</Button>
+                                                <Button className='border-0' style={{ background: "#E65425" }}>Save Changes</Button>
                                             </Form>
                                         </Card.Text>
                                     </Card.Body>

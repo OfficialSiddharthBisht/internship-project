@@ -102,8 +102,9 @@ function Deposit() {
                                         <InputGroup>
                                             <DropdownButton
                                                 variant="outline-secondary"
-                                                title="Month"
+                                                title="Year"
                                                 id="input-group-dropdown-1"
+                                                className='border-0'
                                             >
                                                 <Dropdown.Item>2022</Dropdown.Item>
                                                 <Dropdown.Item>2023</Dropdown.Item>
