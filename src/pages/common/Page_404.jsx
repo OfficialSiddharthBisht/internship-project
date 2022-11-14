@@ -1,12 +1,9 @@
 import React from 'react'
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { Button, Card } from 'react-bootstrap';
 function _404() {
   return (
-    <Card className="text-center" style={{border:"none",height:"100vh"}}>
-      <Card.Body style={{backgroundColor:"#0F0F0F"}}>
+    <Card className="text-center" style={{ border: "none", height: "100vh" }}>
+      <Card.Body style={{ backgroundColor: "#0F0F0F" }}>
         <Card.Text>
           <img src="./static/icons/logo.png" alt="" width={"40px"} height={"40px"} />
           <span style={{ fontSize: "40px" }}>LABELFALCON</span>
@@ -16,7 +13,7 @@ function _404() {
             <br />
             <p>Maybe we have broken this page.<br />Come back to the homepage</p>
           </div>
-          <Button style={{color:"#FFFFFF",fontWeight:"bold"}}>← Back To Homepage</Button>{' '}
+          <Button style={{ color: "#FFFFFF", fontWeight: "bold" }}>← Back To Homepage</Button>{' '}
         </Card.Text>
       </Card.Body>
     </Card>
