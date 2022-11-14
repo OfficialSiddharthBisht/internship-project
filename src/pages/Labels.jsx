@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Card, Table, ProgressBar, Form, Row, Col, Button } from 'react-bootstrap';
-
+import Header from '../layout/Header';
 function Labels() {
     let [labelData, setLabelData] = useState([1, 2, 3, 4, 5])
     return (
         <>
+            <Header />
             <h2>Labels History</h2>
             <Card>
                 <Card.Body className='card-body'>

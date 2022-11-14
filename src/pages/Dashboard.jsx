@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Table } from 'react-bootstrap'
+import Header from '../layout/Header';
 
 function Dashboard() {
   const [latestOrders, setLatestOrders] = useState([
@@ -50,80 +51,72 @@ function Dashboard() {
   ]);
   return (
     <>
+      <Header />
       <Container>
         <h5>Overview</h5>
         <Row>
           <Col>
-            <Card>
-              <Card.Body style={{ background: "linearGradient(92.01deg, #FF7A49 0%, #F99A4D 100%)" }}>
-                <Card.Subtitle className="mb-2 text-muted">Total Orders</Card.Subtitle>
-                <Card.Title>2103</Card.Title>
-              </Card.Body>
-            </Card>
+              <img src="./static/icons/1.png" alt="" width={"250px"}/>
           </Col>
           <Col>
-            <Card>
-              <Card.Body style={{ background: "linearGradient(92.01deg, #FF7A49 0%, #F99A4D 100%)" }}>
-                <Card.Subtitle className="mb-2 text-muted">Balance</Card.Subtitle>
-                <Card.Title>$500</Card.Title>
-              </Card.Body>
-            </Card>
+              <img src="./static/icons/2.png" alt="" width={"250px"}/>
           </Col>
           <Col>
-            <Card>
-              <Card.Body style={{ background: "linearGradient(92.01deg, #FF7A49 0%, #F99A4D 100%)" }}>
-                <Card.Subtitle className="mb-2 text-muted">Total Deposits</Card.Subtitle>
-                <Card.Title>$1100</Card.Title>
-              </Card.Body>
-            </Card>
+              <img src="./static/icons/3.png" alt="" width={"250px"}/>
           </Col>
           <Col>
-            <Card>
-              <Card.Body style={{ background: "linearGradient(92.01deg, #FF7A49 0%, #F99A4D 100%)" }}>
-                <Card.Subtitle className="mb-2 text-muted">Tickets</Card.Subtitle>
-                <Card.Title>2103</Card.Title>
-              </Card.Body>
-            </Card>
+              <img src="./static/icons/4.png" alt="" width={"250px"}/>
           </Col>
         </Row>
       </Container>
       <br />
-      <h5>Latest Orders</h5>
-      <Table>
-        <thead>
-          <tr>
-            <th>Order Id</th>
-            <th>Tracking ID</th>
-            <th>Date and Time</th>
-            <th>Stage</th>
-            <th>Status</th>
-            <th>Download</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            latestOrders.map((el, index) => {
-              return (
-                <tr>
-                  <td>{el.orderId}</td>
-                  <td>{el.trackingId}</td>
-                  <td>{el.dateAndTime}</td>
-                  <td>{el.stage}</td>
-                  <td>{el.status}</td>
-                  <td>{el.download}</td>
-                </tr>
-              )
-            })
-          }
-        </tbody>
-      </Table>
-
+      <Card.Title style={{ display: "flex", justifyContent: "space-between" }}>
+        <span>Latest Orders</span>
+        <span><small style={{ color: "#426CFF" }}>Show All →</small></span>
+      </Card.Title>
+      <br />
+      <Card>
+        <Card.Body>  
+          <Table>
+            <thead>
+              <tr>
+                <th>Order Id</th>
+                <th>Tracking ID</th>
+                <th>Date and Time</th>
+                <th>Stage</th>
+                <th>Status</th>
+                <th>Download</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                latestOrders.map((el, index) => {
+                  return (
+                    <tr>
+                      <td>{el.orderId}</td>
+                      <td>{el.trackingId}</td>
+                      <td>{el.dateAndTime}</td>
+                      <td>{el.stage}</td>
+                      <td>{el.status}</td>
+                      <td>{el.download}</td>
+                    </tr>
+                  )
+                })
+              }
+            </tbody>
+          </Table>
+        </Card.Body>
+      </Card>
+      <br />
       <Container>
         <Row>
           <Col>
             <Card>
               <Card.Body className='card-body'>
-                <Card.Title>Recent Deposits</Card.Title>
+                <Card.Title style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span>Recent Deposits</span>
+                  <span><small style={{ color: "#426CFF" }}>Show All →</small></span>
+                </Card.Title>
                 <Table striped bordered hover>
                   <thead>
                     <tr>
@@ -153,14 +146,14 @@ function Dashboard() {
           </Col>
           <Col>
             <Card>
-              <Card.Body className='card-body'>
+              <Card.Body className='card-body' style={{backgroundColor:"#1E1E1E"}}>
                 <Card.Title>Support</Card.Title>
                 <Container>
                   <Row>
                     <Col>
                       <Card>
-                        <Card.Body>
-                          <Card.Title style={{ textAlign: "center" }}><h1>FAQ</h1></Card.Title>
+                        <Card.Body className='card-body' style={{backgroundColor:" #282828"}}>
+                          <Card.Title style={{ textAlign: "center" }}><h5>FAQ</h5></Card.Title>
                           <Card.Text style={{ textAlign: "center" }}>
                             What you should know, basing on what we have been asked about <br />
                             <a href="#">Show →</a>
@@ -171,13 +164,13 @@ function Dashboard() {
                     <Col>
                       <Row>
                         <Card>
-                          <Card.Body className='card-body'>
+                          <Card.Body className='card-body'  style={{backgroundColor:" #282828"}} >
                             <Card.Text>
                               <Row>
                                 <Col> <img src="./static/icons/discord.png" alt="" /> </Col>
                                 <Col>
                                   Join <br />
-                                  Discord Server
+                                  <span>Discord Server</span>
                                 </Col>
                               </Row>
                             </Card.Text>
@@ -186,7 +179,7 @@ function Dashboard() {
                       </Row>
                       <Row>
                         <Card>
-                          <Card.Body className='card-body'>
+                          <Card.Body className='card-body'  style={{backgroundColor:" #282828"}}>
                             <Card.Text>
                               <Row>
                                 <Col> <img src="./static/icons/telegram.png" alt="" /> </Col>

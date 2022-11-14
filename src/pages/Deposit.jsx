@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, Button, Card, Form, InputGroup, DropdownButton, Dropdown, Table } from 'react-bootstrap';
-
+import Header from '../layout/Header';
 function Deposit() {
     const [depositHistoryData, setDepositHistoryData] = useState([
         {
@@ -41,7 +41,8 @@ function Deposit() {
         }
     ])
     return (
-        <>
+        <>  
+            <Header />
             <h2>Deposits</h2>
             <Container>
                 <Row>

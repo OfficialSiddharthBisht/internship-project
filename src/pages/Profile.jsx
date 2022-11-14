@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, Card, Form, InputGroup, FloatingLabel, Button } from 'react-bootstrap';
-
+import Header from '../layout/Header';
 function Profile() {
     const [profileInfo, setProfileInfo] = useState([
         {
@@ -30,6 +30,7 @@ function Profile() {
     ])
     return (
         <>
+            <Header/>
             <Container>
                 <Row>
                     <Col>

@@ -15,3 +15,10 @@ thead{
     color: #ABABAB;
     background-color: #1E1E1E;
 }
+thead{
+    background-color: #282828;
+    border-radius: 10px;
+}
+td{
+    border: none;
+}

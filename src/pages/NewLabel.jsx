@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, Card, Form, InputGroup, FloatingLabel, Button } from 'react-bootstrap'
-
+import Header from '../layout/Header'
 function NewLabel() {
     const [senderReceiverInfo, setSenderReceiverInfo] = useState([
         "Name", "Phone", "Address line 1", "Address line 2", "Address line 3", "City", "ZIP", "State"
@@ -25,6 +25,7 @@ function NewLabel() {
     ])
     return (
         <>
+            <Header />
             <Container>
                 <Row>
                     <Col>

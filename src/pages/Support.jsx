@@ -1,9 +1,10 @@
 import React from 'react'
 import {Container,Row, Col ,Card,Table,Button,Form,DropdownButton,Dropdown,InputGroup} from 'react-bootstrap';
-
+import Header from '../layout/Header';
 function Support() {
     return (
         <>
+            <Header/>
             <Container>
                 <Row>
                     <Col>
