@@ -13,7 +13,7 @@ function Support() {
                                 <Card.Title>Open Support Ticket</Card.Title>
                                 <Card.Text>
                                     {/* <Form.Label>Title</Form.Label> */}
-                                    <Form.Control placeholder='Title' />
+                                    <Form.Control className='border-0' placeholder='Title' />
                                     <Form.Label>Category</Form.Label>
                                     <InputGroup>
                                         <DropdownButton
@@ -28,7 +28,7 @@ function Support() {
                                     </InputGroup>
                                     <br />
                                     <div className="form-field">
-                                        <textarea type={"text"} className="form-control" placeholder="Message" style={{height:"150px"}} />
+                                        <textarea type={"text"} className="form-control border-0" placeholder="Message" style={{height:"150px"}} />
                                     </div>
                                 </Card.Text>
                                 <Button style={{background: "#E65425",margin:"auto",width:"100%"}}>+ Open Ticket</Button>

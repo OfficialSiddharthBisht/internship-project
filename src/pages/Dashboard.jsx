@@ -98,7 +98,7 @@ function Dashboard() {
                       <td>{el.dateAndTime}</td>
                       <td>{el.stage}</td>
                       <td>{el.status}</td>
-                      <td>{el.download}</td>
+                      <td><img src="./static/icons/pdf.png" alt="" /> {el.download}</td>
                     </tr>
                   )
                 })

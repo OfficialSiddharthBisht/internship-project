@@ -39,6 +39,7 @@ function NewLabel() {
                                                 <Col>
                                                     <InputGroup size="sm" className="mb-3">
                                                         <Form.Control aria-label="Small"
+                                                            className='border-0'
                                                             aria-describedby="inputGroup-sizing-sm"
                                                             type="text" placeholder={el} />
                                                     </InputGroup>
@@ -62,6 +63,7 @@ function NewLabel() {
                                                     <InputGroup size="sm" className="mb-3">
                                                         <Form.Control aria-label="Small"
                                                             aria-describedby="inputGroup-sizing-sm"
+                                                            className='border-0'
                                                             type="text" placeholder={el} />
                                                     </InputGroup>
                                                 </Col>
@@ -78,7 +80,7 @@ function NewLabel() {
                                 <Card.Title>③General Data</Card.Title>
                                 <Card.Text>
                                     <Col>
-                                        <Form.Select aria-label="Default select example">
+                                        <Form.Select className='border-0' aria-label="Default select example">
                                             <option>Provider</option>
                                             <option value="1">UPS</option>
                                             <option value="2">APS</option>
@@ -87,7 +89,7 @@ function NewLabel() {
                                     </Col>
                                     <br />
                                     <Col>
-                                        <Form.Select aria-label="Default select example">
+                                        <Form.Select className='border-0' aria-label="Default select example">
                                             <option>Shipping Speed</option>
                                             <option value="1">Immediate</option>
                                             <option value="2">Can Wait</option>
@@ -103,6 +105,7 @@ function NewLabel() {
                                                     <InputGroup size="sm" className="mb-3">
                                                         <Form.Control aria-label="Small"
                                                             aria-describedby="inputGroup-sizing-sm"
+                                                            className='border-0'
                                                             type="number" placeholder={el.placeholder} />
                                                     </InputGroup>
                                                 </Col>

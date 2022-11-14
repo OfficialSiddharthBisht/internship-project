@@ -51,6 +51,7 @@ function Profile() {
                                                         >
                                                             <Form.Control aria-label="Small"
                                                                 aria-describedby="inputGroup-sizing-sm"
+                                                                className='border-0'
                                                                 type="text" placeholder={el.info} />
                                                         </FloatingLabel>
                                                     </InputGroup>
@@ -82,13 +83,13 @@ function Profile() {
                                             <Form>
                                                 <h3>Change Password</h3>
                                                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                                                    <Form.Control type="password" placeholder="Old Password" />
+                                                    <Form.Control className='border-0' type="password" placeholder="Old Password" />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                                                    <Form.Control type="password" placeholder="New Password" />
+                                                    <Form.Control className='border-0' type="password" placeholder="New Password" />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                                                    <Form.Control type="password" placeholder="Repeat Password" />
+                                                    <Form.Control className='border-0' type="password" placeholder="Repeat Password" />
                                                 </Form.Group>
                                                 <Button style={{ background: "#E65425" }}>Save Changes</Button>
                                             </Form>

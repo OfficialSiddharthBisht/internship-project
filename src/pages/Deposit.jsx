@@ -54,7 +54,7 @@ function Deposit() {
                                 </Card.Header>
                                 <br />
                                 <InputGroup size="lg">
-                                    <Form.Control />
+                                    <Form.Control className='border-0'/>
                                     <InputGroup.Text>USD</InputGroup.Text>
                                 </InputGroup>
                                 <p>Choose Payment Method</p>
@@ -67,7 +67,7 @@ function Deposit() {
                                     </Col>
                                 </Row>
                                 <br />
-                                <Form.Control aria-label="Card Number" placeHolder="Card Number" />
+                                <Form.Control className='border-0' aria-label="Card Number" placeHolder="Card Number" />
                                 <br />
                                 <Row>
                                     <Col>
@@ -75,6 +75,7 @@ function Deposit() {
                                             <DropdownButton
                                                 variant="outline-secondary"
                                                 title="Month"
+                                                className='border-0'
                                                 id="input-group-dropdown-1"
                                             >
                                                 <Dropdown.Item>Jan</Dropdown.Item>
@@ -116,7 +117,7 @@ function Deposit() {
                                     </Col>
                                     <br /> <br /> <br />
                                     <Col>
-                                        <Form.Control size="sm" placeholder='SVV Number' />
+                                        <Form.Control className='border-0' size="sm" placeholder='SVV Number' />
                                     </Col>
                                 </Row>
                                 <Row>
