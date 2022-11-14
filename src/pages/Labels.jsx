@@ -31,7 +31,7 @@ function Labels() {
                                                     Delivered to Customer
                                                     <small>To:USA,California,LA</small>
                                                 </td>
-                                                <td><img src="./static/icons/status.png" alt="" />PDF </td>
+                                                <td><img src="./static/icons/pdf.png" alt="" />PDF </td>
                                                 <td>
                                                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                                         <Form.Check type="checkbox" />

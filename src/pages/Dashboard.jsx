@@ -1,7 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Card, Table } from 'react-bootstrap'
 
 function Dashboard() {
+  const [latestOrders, setLatestOrders] = useState([
+    {
+      orderId: "#488183",
+      trackingId: "845-3424-31",
+      dateAndTime: "09/28/2022 | 10:30 AM",
+      stage: "Tracking Number Created",
+      status: "On Delivery",
+      download: "PDF",
+    },
+    {
+      orderId: "#499198",
+      trackingId: "444-0024-32",
+      dateAndTime: "09/28/2022 | 10:00 AM",
+      stage: "Delivered",
+      status: "Completed",
+      download: "PDF",
+    },
+    {
+      orderId: "#145259",
+      trackingId: "987-2438-37",
+      dateAndTime: "09/28/2022 | 12:30 AM",
+      stage: "Trackig Number Created",
+      status: "Cancelled",
+      download: "PDF",
+    },
+  ]);
+  const [recentDepositsData, setRecentDepositData] = useState([
+    {
+      amount: "1000.00",
+      method: "Crypto",
+      dateAndTime: "09/28/2022",
+      status: true,
+    },
+    {
+      amount: "265.00",
+      method: "Credit Card",
+      dateAndTime: "12/12/2022",
+      status: false,
+    },
+    {
+      amount: "120.00",
+      method: "Credit Card",
+      dateAndTime: "01/06/2022",
+      status: true,
+    }
+  ]);
   return (
     <>
       <Container>
@@ -41,7 +87,7 @@ function Dashboard() {
           </Col>
         </Row>
       </Container>
-
+      <br />
       <h5>Latest Orders</h5>
       <Table>
         <thead>
@@ -55,23 +101,20 @@ function Dashboard() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {
+            latestOrders.map((el, index) => {
+              return (
+                <tr>
+                  <td>{el.orderId}</td>
+                  <td>{el.trackingId}</td>
+                  <td>{el.dateAndTime}</td>
+                  <td>{el.stage}</td>
+                  <td>{el.status}</td>
+                  <td>{el.download}</td>
+                </tr>
+              )
+            })
+          }
         </tbody>
       </Table>
 
@@ -91,23 +134,18 @@ function Dashboard() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td colSpan={2}>Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
+                    {
+                      recentDepositsData.map((el, index) => {
+                        return (
+                          <tr>
+                            <td>{el.amount}</td>
+                            <td>{el.method}</td>
+                            <td>{el.dateAndTime}</td>
+                            <td>{`${el.status}`}</td>
+                          </tr>
+                        )
+                      })
+                    }
                   </tbody>
                 </Table>
               </Card.Body>
