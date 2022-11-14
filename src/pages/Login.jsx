@@ -1,16 +1,10 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
-import Container from 'react-bootstrap/Container';
+import { Button, Card, Row, Col, InputGroup, FloatingLabel, Form, Container } from 'react-bootstrap';
+
 function Login() {
   return (
     <>
-      <Card className="text-center" style={{ width: "50%", margin: "auto", backgroundColor: "#404040", marginTop: "140px", minHeight: "400px",background: "linear-gradient(92.01deg, #42A04B 0%, #06AC70 100%)" }}>
+      <Card className="text-center" style={{ width: "50%", margin: "auto", backgroundColor: "#404040", marginTop: "140px", minHeight: "400px", background: "linear-gradient(92.01deg, #42A04B 0%, #06AC70 100%)" }}>
         <Card.Body>
           <Card.Text>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -18,7 +12,7 @@ function Login() {
                 <img src="./static/icons/logo.png" alt="" width={"40px"} height={"40px"} />
                 <span style={{ fontSize: "40px", color: "#FFFFFF" }}>Account</span>
               </span>
-              <span><h6 style={{color: "#FF7A49"}}>Sign Up</h6></span>
+              <span><h6 style={{ color: "#FF7A49" }}>Sign Up</h6></span>
             </div>
             <br />
             <Col>

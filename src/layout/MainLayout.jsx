@@ -1,10 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import Avatar from "react-avatar";
 import { Outlet, useNavigate } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+
 export default function MainLayout() {
   const navigate = useNavigate();
   const [isMobile, setisMobile] = useState(false);
@@ -78,7 +74,7 @@ export default function MainLayout() {
                 navigate("/");
               }}
             >
-              <img src="./static/icons/logo.png" alt="Logo" className="img-fluid" style={{ maxWidth: "2rem" }} />
+              <img src="./static/icons/theLogo.png" alt="" />
             </a>
           </div>
 
@@ -186,6 +182,7 @@ export default function MainLayout() {
                           ? "d-flex align-items-center bg-primary p-2 rounded mb-2 cp"
                           : "d-flex align-items-center menu p-2 rounded mb-2 cp"
                       }
+                      style={{cursor:"pointer"}}
                       onClick={() => {
                         setselectedMenu(singleMenu);
                         navigate(singleMenu.link);
@@ -202,8 +199,8 @@ export default function MainLayout() {
                 })}
               </div>
             </div>
-            <img src="./static/icons/balanceNav.png" alt="" width={"80%"} style={{ margin: "auto" }} />
-            <img src="./static/icons/create.png" alt="" width={"80%"} style={{ margin: "auto" }} />
+            <img src="./static/icons/balanceNav.png" alt="" width={"80%"} style={{ margin: "auto",cursor:"pointer" }} />
+            <img src="./static/icons/create.png" alt="" width={"80%"} style={{ margin: "auto",cursor:"pointer" }} />
           </div>
         </nav>
 

@@ -1,12 +1,6 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
-import Container from 'react-bootstrap/Container';
+import {Button, Card, Row, Col, InputGroup, FloatingLabel,Form,Container} from 'react-bootstrap';
+
 function Signup() {
   return (
     <>

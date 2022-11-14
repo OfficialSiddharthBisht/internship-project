@@ -1,12 +1,6 @@
 import React, { useState } from 'react'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card'
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Button from 'react-bootstrap/Button';
+import { Container, Row, Col, Card, Form, InputGroup, FloatingLabel, Button } from 'react-bootstrap'
+
 function NewLabel() {
     const [senderReceiverInfo, setSenderReceiverInfo] = useState([
         "Name", "Phone", "Address line 1", "Address line 2", "Address line 3", "City", "ZIP", "State"
@@ -117,7 +111,7 @@ function NewLabel() {
                                 </Card.Text>
                                 <Button variant="light">
                                     <img src="./static/icons/price.png" alt="" />
-                                    Price: <span style={{color:"#E65425" }}>$0.00</span>
+                                    Price: <span style={{ color: "#E65425" }}>$0.00</span>
                                 </Button>
                                 <small>Questions? FAQ</small>
                             </Card.Body>
@@ -126,7 +120,7 @@ function NewLabel() {
                 </Row>
                 <br />
                 <Row>
-                    <Button variant="light" style={{ border: "1px dashed #E65425",color:"#E65425" }}>+ Create New Label</Button>{' '}
+                    <Button variant="light" style={{ border: "1px dashed #E65425", color: "#E65425" }}>+ Create New Label</Button>{' '}
                 </Row>
             </Container>
         </>

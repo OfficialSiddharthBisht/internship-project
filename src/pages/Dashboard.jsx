@@ -1,9 +1,5 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card'
-import Table from 'react-bootstrap/Table';
+import { Container, Row, Col, Card, Table } from 'react-bootstrap'
 
 function Dashboard() {
   return (
@@ -128,7 +124,7 @@ function Dashboard() {
                         <Card.Body>
                           <Card.Title style={{ textAlign: "center" }}><h1>FAQ</h1></Card.Title>
                           <Card.Text style={{ textAlign: "center" }}>
-                            What you should know, basing on what we have been asked about <br/>
+                            What you should know, basing on what we have been asked about <br />
                             <a href="#">Show →</a>
                           </Card.Text>
                         </Card.Body>
@@ -142,7 +138,7 @@ function Dashboard() {
                               <Row>
                                 <Col> <img src="./static/icons/discord.png" alt="" /> </Col>
                                 <Col>
-                                  Join <br/>
+                                  Join <br />
                                   Discord Server
                                 </Col>
                               </Row>
@@ -157,7 +153,7 @@ function Dashboard() {
                               <Row>
                                 <Col> <img src="./static/icons/telegram.png" alt="" /> </Col>
                                 <Col>
-                                  Join <br/>
+                                  Join <br />
                                   Telegram Live Chat
                                 </Col>
                               </Row>

@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
-import Card from 'react-bootstrap/Card';
-import Table from 'react-bootstrap/Table';
-import ProgressBar from 'react-bootstrap/ProgressBar';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+import { Card, Table, ProgressBar, Form, Row, Col, Button } from 'react-bootstrap';
+
 function Labels() {
     let [labelData, setLabelData] = useState([1, 2, 3, 4, 5])
     return (
@@ -64,7 +59,7 @@ function Labels() {
                                 <small>or</small>
                             </Col>
                             <Col>
-                                <Button variant="light" style={{ border: "1px solid #E65425",color:"#E65425" }}>Download as PDF</Button>
+                                <Button variant="light" style={{ border: "1px solid #E65425", color: "#E65425" }}>Download as PDF</Button>
                             </Col>
                         </Row>
                     </Card.Footer>

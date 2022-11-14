@@ -1,7 +1,5 @@
 import React from 'react'
-import Accordion from 'react-bootstrap/Accordion';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Accordion, Row, Col } from 'react-bootstrap';
 
 function FAQ() {
     const arr = [

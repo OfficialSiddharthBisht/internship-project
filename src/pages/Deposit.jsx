@@ -1,14 +1,6 @@
 import React, { useState } from 'react'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown';
-import Table from 'react-bootstrap/Table';
+import { Container, Row, Col, Button, Card, Form, InputGroup, DropdownButton, Dropdown, Table } from 'react-bootstrap';
+
 function Deposit() {
     const [depositHistoryData, setDepositHistoryData] = useState([
         {
@@ -56,8 +48,8 @@ function Deposit() {
                     <Col>
                         <Card>
                             <Card.Body className='card-body'>
-                                <Card.Header style={{backgroundColor:"#404040",color:"#FFFFFF",margin:"0px"}}>
-                                <h4 >Topup Account</h4>
+                                <Card.Header style={{ backgroundColor: "#404040", color: "#FFFFFF", margin: "0px" }}>
+                                    <h4 >Topup Account</h4>
                                 </Card.Header>
                                 <br />
                                 <InputGroup size="lg">
@@ -127,7 +119,7 @@ function Deposit() {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Button variant="primary" style={{color:" #FFFFFF"}}>Proceed</Button>{' '}
+                                    <Button variant="primary" style={{ color: " #FFFFFF" }}>Proceed</Button>{' '}
                                 </Row>
                             </Card.Body>
                         </Card>
@@ -152,9 +144,9 @@ function Deposit() {
                                                 depositHistoryData.map((el, index) => {
                                                     return (
                                                         <tr>
-                                                            <td style={{color:"#FF7A49"}}>{el.amount}</td>
-                                                            <td style={{color:"#FFFFFF"}}>{el.method}</td>
-                                                            <td style={{color:"#656565"}}>{el.Date}</td>
+                                                            <td style={{ color: "#FF7A49" }}>{el.amount}</td>
+                                                            <td style={{ color: "#FFFFFF" }}>{el.method}</td>
+                                                            <td style={{ color: "#656565" }}>{el.Date}</td>
                                                             <td>{`${el.status}`}</td>
                                                         </tr>
                                                     )
