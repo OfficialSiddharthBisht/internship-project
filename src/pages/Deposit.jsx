@@ -47,7 +47,7 @@ function Deposit() {
             <Container>
                 <Row>
                     <Col>
-                        <Card>
+                        <Card className='border-0'>
                             <Card.Body className='card-body'>
                                 <Card.Header style={{ backgroundColor: "#404040", color: "#FFFFFF", margin: "0px" }}>
                                     <h4 >Topup Account</h4>
@@ -129,7 +129,7 @@ function Deposit() {
                     <Col>
                         <h5>Deposit History</h5>
                         <Container>
-                            <Card>
+                            <Card className='border-0'>
                                 <Card.Body className='card-body'>
                                     <Table className='table table-borderless '>
                                         <thead>

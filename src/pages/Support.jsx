@@ -8,7 +8,7 @@ function Support() {
             <Container>
                 <Row>
                     <Col>
-                        <Card>
+                        <Card className='border-0'>
                             <Card.Body className='card-body'>
                                 <Card.Title>Open Support Ticket</Card.Title>
                                 <Card.Text>
@@ -36,7 +36,7 @@ function Support() {
                         </Card>
                     </Col>
                     <Col>
-                        <Card style={{minHeight:"600px",minWidth:"50vw"}}>
+                        <Card className='border-0' style={{minHeight:"600px",minWidth:"50vw"}}>
                             <Card.Body className='card-body'>
                                 <Card.Title>Support History</Card.Title>
                                 <Card.Text>

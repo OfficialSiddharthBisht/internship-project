@@ -30,7 +30,7 @@ function FAQ() {
                     arr.map((ele, index) => {
                         return (
                             <>
-                                <Accordion.Item eventKey={index}>
+                                <Accordion.Item eventKey={index} className='border-0'>
                                     <Accordion.Header>{ele}</Accordion.Header>
                                     <Accordion.Body>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -34,7 +34,7 @@ function Profile() {
             <Container>
                 <Row>
                     <Col>
-                        <Card>
+                        <Card className='border-0'>
                             <Card.Body>
                                 <Card.Title>Profile Information</Card.Title>
                                 <Card.Text>
@@ -75,7 +75,7 @@ function Profile() {
                     <Col>
                         <Row>
                             <Col>
-                                <Card>
+                                <Card className='border-0'>
                                     <Card.Body className='card-body'>
                                         <Card.Title>Profile Information</Card.Title>
                                         <Card.Text>

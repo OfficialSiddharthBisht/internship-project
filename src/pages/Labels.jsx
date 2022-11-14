@@ -7,7 +7,7 @@ function Labels() {
         <>
             <Header />
             <h2>Labels History</h2>
-            <Card>
+            <Card className='border-0'>
                 <Card.Body className='card-body'>
                     <Card.Text>
                         <Table className='table table-borderless'>
@@ -50,7 +50,7 @@ function Labels() {
                     </Card.Text>
                     <Card.Footer width={"100%"} className="text-muted">
                         <Row>
-                            <Col style={{ border: "1px solid grey", borderRadius: "5px" }}>
+                            <Col style={{borderRadius: "5px" }}>
                                 <Button variant="light">You choose (2) files</Button>{' '}
                             </Col>
                             <Col style={{ marginLeft: "20%" }}>

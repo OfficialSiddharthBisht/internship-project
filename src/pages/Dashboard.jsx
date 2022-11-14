@@ -75,7 +75,7 @@ function Dashboard() {
         <span><small style={{ color: "#426CFF" }}>Show All →</small></span>
       </Card.Title>
       <br />
-      <Card>
+      <Card className='border-0'>
         <Card.Body>  
           <Table className='table table-borderless'>
             <thead>
@@ -111,7 +111,7 @@ function Dashboard() {
       <Container>
         <Row>
           <Col>
-            <Card>
+            <Card className='border-0'>
               <Card.Body className='card-body'>
                 <Card.Title style={{ display: "flex", justifyContent: "space-between" }}>
                   <span>Recent Deposits</span>
@@ -145,13 +145,13 @@ function Dashboard() {
             </Card>
           </Col>
           <Col>
-            <Card>
+            <Card className='border-0'>
               <Card.Body className='card-body' style={{backgroundColor:"#1E1E1E"}}>
                 <Card.Title>Support</Card.Title>
                 <Container>
                   <Row>
                     <Col>
-                      <Card>
+                      <Card className='border-0'>
                         <Card.Body className='card-body' style={{backgroundColor:" #282828",border:"none"}}>
                           <Card.Title style={{ textAlign: "center" }}><h5>FAQ</h5></Card.Title>
                           <Card.Text style={{ textAlign: "center" }}>

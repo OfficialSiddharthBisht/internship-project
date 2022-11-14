@@ -29,7 +29,7 @@ function NewLabel() {
             <Container>
                 <Row>
                     <Col>
-                        <Card>
+                        <Card className='border-0'>
                             <Card.Body className='card-body'>
                                 <Card.Title>① Sender</Card.Title>
                                 <Card.Text>
@@ -51,7 +51,7 @@ function NewLabel() {
                         </Card>
                     </Col>
                     <Col>
-                        <Card>
+                        <Card className='border-0'>
                             <Card.Body className='card-body'>
                                 <Card.Title>② Recipient</Card.Title>
                                 <Card.Text>
@@ -73,7 +73,7 @@ function NewLabel() {
                         </Card>
                     </Col>
                     <Col>
-                        <Card>
+                        <Card className='border-0'>
                             <Card.Body className='card-body'>
                                 <Card.Title>③General Data</Card.Title>
                                 <Card.Text>
