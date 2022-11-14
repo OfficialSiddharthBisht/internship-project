@@ -60,7 +60,7 @@ function Profile() {
                                     }
                                     <br />
                                     <Row>
-                                        <Col style={{ border: "1px solid grey", borderRadius: "5px" }}>
+                                        <Col style={{borderRadius: "5px" }}>
                                             <img src="./static/icons/trush.png" alt="" width={"30px"} style={{ margin: "2px" }} />
                                             <Button variant="light">Delete Account</Button>{' '}
                                         </Col>
