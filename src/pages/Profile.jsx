@@ -99,10 +99,10 @@ function Profile() {
                         </Row>
                         <br />
                         <Row>
-                            <Col>
-                                <Card style={{ alignItems: "center" }}>
+                            <Col style={{backgroundColor:"#1E1E1E"}}>
+                                <Card style={{ alignItems: "center",backgroundColor:"#1E1E1E"}}>
                                     <img src="./static/icons/discord2.png" height={"70px"} width={"70px"} />
-                                    <Card.Body className='card-body'>
+                                    <Card.Body className='card-body'style={{backgroundColor:"#1E1E1E",border:"none"}}>
                                         <Card.Title>Login with Discord</Card.Title>
                                         <Card.Text>
                                             After that it will be <br /> linked to your account
@@ -117,10 +117,10 @@ function Profile() {
                                     </Card.Footer>
                                 </Card>
                             </Col>
-                            <Col>
-                                <Card style={{ alignItems: "center" }}>
+                            <Col style={{backgroundColor:"#1E1E1E"}}>
+                                <Card style={{ alignItems: "center",backgroundColor:"#1E1E1E" }}>
                                     <img src="./static/icons/telegram2.png" height={"70px"} width={"70px"} />
-                                    <Card.Body className='card-body'>
+                                    <Card.Body className='card-body' style={{backgroundColor:"#1E1E1E",border:"none"}}>
                                         <Card.Title>Login with Telegram</Card.Title>
                                         <Card.Text>
                                             After that it will be <br /> linked to your account

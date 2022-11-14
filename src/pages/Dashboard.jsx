@@ -77,7 +77,7 @@ function Dashboard() {
       <br />
       <Card>
         <Card.Body>  
-          <Table>
+          <Table className='table table-borderless'>
             <thead>
               <tr>
                 <th>Order Id</th>
@@ -117,7 +117,7 @@ function Dashboard() {
                   <span>Recent Deposits</span>
                   <span><small style={{ color: "#426CFF" }}>Show All →</small></span>
                 </Card.Title>
-                <Table striped bordered hover>
+                <Table className='table table-borderless'>
                   <thead>
                     <tr>
                       <th>Amount</th>
@@ -152,7 +152,7 @@ function Dashboard() {
                   <Row>
                     <Col>
                       <Card>
-                        <Card.Body className='card-body' style={{backgroundColor:" #282828"}}>
+                        <Card.Body className='card-body' style={{backgroundColor:" #282828",border:"none"}}>
                           <Card.Title style={{ textAlign: "center" }}><h5>FAQ</h5></Card.Title>
                           <Card.Text style={{ textAlign: "center" }}>
                             What you should know, basing on what we have been asked about <br />
@@ -162,9 +162,9 @@ function Dashboard() {
                       </Card>
                     </Col>
                     <Col>
-                      <Row>
-                        <Card>
-                          <Card.Body className='card-body'  style={{backgroundColor:" #282828"}} >
+                      <Row style={{backgroundColor:"#1E1E1E"}}>
+                        <Card style={{backgroundColor:"#1E1E1E"}}>
+                          <Card.Body className='card-body'  style={{backgroundColor:" #282828",border:"none"}} >
                             <Card.Text>
                               <Row>
                                 <Col> <img src="./static/icons/discord.png" alt="" /> </Col>
@@ -178,8 +178,8 @@ function Dashboard() {
                         </Card>
                       </Row>
                       <Row>
-                        <Card>
-                          <Card.Body className='card-body'  style={{backgroundColor:" #282828"}}>
+                        <Card style={{backgroundColor:"#1E1E1E",borderRadius:"10px"}}>
+                          <Card.Body className='card-body'  style={{backgroundColor:" #282828",border:"none"}}>
                             <Card.Text>
                               <Row>
                                 <Col> <img src="./static/icons/telegram.png" alt="" /> </Col>

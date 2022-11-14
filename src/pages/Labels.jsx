@@ -10,7 +10,7 @@ function Labels() {
             <Card>
                 <Card.Body className='card-body'>
                     <Card.Text>
-                        <Table striped bordered hover>
+                        <Table className='table table-borderless'>
                             <tbody>
                                 {
                                     labelData.map((data, index) => {

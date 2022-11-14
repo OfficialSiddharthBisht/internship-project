@@ -131,7 +131,7 @@ function Deposit() {
                         <Container>
                             <Card>
                                 <Card.Body className='card-body'>
-                                    <Table>
+                                    <Table className='table table-borderless '>
                                         <thead>
                                             <tr>
                                                 <th>Amout</th>

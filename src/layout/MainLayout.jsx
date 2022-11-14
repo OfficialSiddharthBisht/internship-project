@@ -200,7 +200,9 @@ export default function MainLayout() {
               </div>
             </div>
             <img src="./static/icons/balanceNav.png" alt="" width={"80%"} style={{ margin: "auto",cursor:"pointer" }} />
-            <img src="./static/icons/create.png" alt="" width={"80%"} style={{ margin: "auto",cursor:"pointer" }} />
+            <img src="./static/icons/create.png" alt="" width={"80%"} style={{ margin: "auto",cursor:"pointer" }} onClick={()=>{
+              navigate("/newlabel");
+            }}/>
           </div>
         </nav>
 
