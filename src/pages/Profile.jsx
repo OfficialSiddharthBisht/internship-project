@@ -30,11 +30,11 @@ function Profile() {
     ])
     return (
         <>
-            <Header/>
+            <Header />
             <Container>
                 <Row>
                     <Col>
-                        <Card className='border-0'>
+                        <Card className='border-0' style={{ minWidth: "350px" }}>
                             <Card.Body>
                                 <Card.Title>Profile Information</Card.Title>
                                 <Card.Text>
@@ -61,11 +61,15 @@ function Profile() {
                                     }
                                     <br />
                                     <Row>
-                                        <Col style={{borderRadius: "5px" }}>
-                                            <img src="./static/icons/trush.png" alt="" width={"30px"} style={{ margin: "2px" }} />
-                                            <Button className='border-0' variant="light">Delete Account</Button>{' '}
+                                        <Col style={{ borderRadius: "5px" }}>
+                                            <Button className='border-0' style={{ color: "#ABABAB", backgroundColor: "#1E1E1E" }}>
+                                                <img src="./static/icons/trush.png" alt=""
+                                                    width={"25px"}
+                                                    style={{ marginRight: "2px" }} />
+                                                Delete Account
+                                            </Button>{' '}
                                         </Col>
-                                        <Col style={{ marginLeft: "20%" }}>
+                                        <Col>
                                             <Button className='border-0' style={{ background: "#E65425" }}>Save Changes</Button>
                                         </Col>
                                     </Row>
@@ -76,7 +80,7 @@ function Profile() {
                     <Col>
                         <Row>
                             <Col>
-                                <Card className='border-0'>
+                                <Card className='border-0' style={{ minWidth: "350px" }}>
                                     <Card.Body className='card-body'>
                                         <Card.Title>Profile Information</Card.Title>
                                         <Card.Text>
@@ -100,10 +104,10 @@ function Profile() {
                         </Row>
                         <br />
                         <Row>
-                            <Col style={{backgroundColor:"#1E1E1E"}}>
-                                <Card style={{ alignItems: "center",backgroundColor:"#1E1E1E"}}>
+                            <Col style={{ backgroundColor: "#1E1E1E" }}>
+                                <Card style={{ alignItems: "center", backgroundColor: "#1E1E1E", minWidth: "350px" }}>
                                     <img src="./static/icons/discord2.png" height={"70px"} width={"70px"} />
-                                    <Card.Body className='card-body'style={{backgroundColor:"#1E1E1E",border:"none"}}>
+                                    <Card.Body className='card-body' style={{ backgroundColor: "#1E1E1E", border: "none" }}>
                                         <Card.Title>Login with Discord</Card.Title>
                                         <Card.Text>
                                             After that it will be <br /> linked to your account
@@ -118,10 +122,10 @@ function Profile() {
                                     </Card.Footer>
                                 </Card>
                             </Col>
-                            <Col style={{backgroundColor:"#1E1E1E"}}>
-                                <Card style={{ alignItems: "center",backgroundColor:"#1E1E1E" }}>
+                            <Col style={{ backgroundColor: "#1E1E1E" }}>
+                                <Card style={{ alignItems: "center", backgroundColor: "#1E1E1E" }}>
                                     <img src="./static/icons/telegram2.png" height={"70px"} width={"70px"} />
-                                    <Card.Body className='card-body' style={{backgroundColor:"#1E1E1E",border:"none"}}>
+                                    <Card.Body className='card-body' style={{ backgroundColor: "#1E1E1E", border: "none" }}>
                                         <Card.Title>Login with Telegram</Card.Title>
                                         <Card.Text>
                                             After that it will be <br /> linked to your account
