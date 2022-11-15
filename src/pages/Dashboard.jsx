@@ -223,7 +223,7 @@ function Dashboard() {
                           <Card.Body className='card-body' style={{ backgroundColor: " #282828", border: "none" }}>
                             <Card.Text>
                               <Row>
-                                <Col> <img src="./static/icons/telegram.png" alt="" /> </Col>
+                                <Col> <img src="./static/icons/telegram.png" alt=""/> </Col>
                                 <Col>
                                   Join <br />
                                   Telegram Live Chat

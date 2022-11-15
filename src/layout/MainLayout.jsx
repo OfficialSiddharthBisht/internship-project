@@ -94,7 +94,7 @@ export default function MainLayout() {
               <img
                 onClick={() => {
                   navigate("/");
-                  // closeMobileMenuRef.current.click();
+                  closeMobileMenuRef.current.click();
                 }}
                 src="./static/icons/theLogo.png"
                 alt="Logo"
@@ -124,7 +124,7 @@ export default function MainLayout() {
                       onClick={() => {
                         setselectedMenu(singleMenu);
                         navigate(singleMenu.link);
-                        // closeMobileMenuRef.current.click();
+                        closeMobileMenuRef.current.click();
                       }}
                     >
                       <div style={{ marginLeft: "0.4rem" }}>
