@@ -31,7 +31,7 @@ function FAQ() {
                         return (
                             <>
                                 <Accordion.Item eventKey={index} className='border-0'>
-                                    <Accordion.Header>{ele}</Accordion.Header>
+                                    <Accordion.Header> <span>{ele}</span> </Accordion.Header>
                                     <Accordion.Body>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
