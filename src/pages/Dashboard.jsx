@@ -114,7 +114,7 @@ function Dashboard() {
       <br />
       <Card className='border-0'>
         <Card.Body>
-          <Table className='table table-borderless'>
+          <Table responsive="sm" className='table table-borderless'>
             <thead>
               <tr>
                 <th>Order Id</th>
@@ -154,7 +154,7 @@ function Dashboard() {
                   <span>Recent Deposits</span>
                   <span><small style={{ color: "#426CFF" }}>Show All →</small></span>
                 </Card.Title>
-                <Table className='table table-borderless'>
+                <Table responsive="sm" className='table table-borderless'>
                   <thead>
                     <tr>
                       <th>Amount</th>

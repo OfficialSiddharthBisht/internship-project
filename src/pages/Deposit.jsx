@@ -133,7 +133,7 @@ function Deposit() {
                         <Container>
                             <Card className='border-0'>
                                 <Card.Body className='card-body'>
-                                    <Table className='table table-borderless '>
+                                    <Table responsive="sm" className='table table-borderless '>
                                         <thead>
                                             <tr>
                                                 <th>Amout</th>
