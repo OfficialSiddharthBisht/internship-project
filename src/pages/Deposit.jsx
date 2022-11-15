@@ -7,37 +7,37 @@ function Deposit() {
             amount: "10000.00",
             method: "Crypto",
             Date: "09/08/2022 | 10:30",
-            status: true,
+            status: "./static/icons/depositTrue.png",
         },
         {
             amount: "2650.00",
             method: "Credit Card",
             Date: "30/08/2022 | 09:35",
-            status: false,
+            status: "./static/icons/depositFalse.png",
         },
         {
             amount: "120.00",
             method: "Credit Card",
             Date: "08/09/2021 | 12:30",
-            status: true,
+            status: "./static/icons/depositTrue.png",
         },
         {
             amount: "100.00",
             method: "Crypto",
             Date: "09/08/2022 | 10:30",
-            status: true,
+            status: "./static/icons/depositTrue.png",
         },
         {
             amount: "28560.00",
             method: "Credit Card",
             Date: "30/08/2022 | 09:35",
-            status: false,
+            status: "./static/icons/depositFalse.png",
         },
         {
             amount: "1920.00",
             method: "Credit Card",
             Date: "08/09/2021 | 12:30",
-            status: true,
+            status: "./static/icons/depositTrue.png",
         }
     ])
     return (
@@ -147,10 +147,10 @@ function Deposit() {
                                                 depositHistoryData.map((el, index) => {
                                                     return (
                                                         <tr>
-                                                            <td style={{ color: "#FF7A49" }}>{el.amount}</td>
+                                                            <td style={{ color: "#FF7A49" }}>₹{el.amount}</td>
                                                             <td style={{ color: "#FFFFFF" }}>{el.method}</td>
                                                             <td style={{ color: "#656565" }}>{el.Date}</td>
-                                                            <td>{`${el.status}`}</td>
+                                                            <td><img src= {el.status} alt="" /></td>
                                                         </tr>
                                                     )
                                                 })

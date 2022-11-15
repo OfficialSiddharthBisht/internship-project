@@ -91,14 +91,14 @@ function Dashboard() {
                   color: "#FFFFFF", padding: "15px",
                   backgroundRepeat: "no-repeat",
                   borderRadius: "10px",
-                  margin:"10px"
+                  margin: "10px"
                 }}>
                   <span>
                     <h5>{card.title}</h5>
                     <h3>{card.num}</h3>
                   </span>
                   <span>
-                    <img src= {card.icon} alt="" />
+                    <img src={card.icon} alt="" />
                   </span>
                 </Col>
               )
@@ -136,6 +136,9 @@ function Dashboard() {
                       <td>{el.stage}</td>
                       <td>{el.status}</td>
                       <td><img src="./static/icons/pdf.png" alt="" /> {el.download}</td>
+                      <td>
+                        <img src="./static/icons/downArrow.png" alt="" />
+                      </td>
                     </tr>
                   )
                 })

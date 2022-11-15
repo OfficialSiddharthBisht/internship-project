@@ -5,6 +5,7 @@
 }
 .card-body{
     background-color: #3A3A3A;
+    border: 20px;
 }
 thead{
     background-color: "#282828";
