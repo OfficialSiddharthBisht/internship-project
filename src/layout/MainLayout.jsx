@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Card, Col } from "react-bootstrap";
 import { Outlet, useNavigate } from "react-router-dom";
 
 export default function MainLayout() {
@@ -178,15 +179,21 @@ export default function MainLayout() {
                       <img src={singleMenu.icon} alt="" />
                       <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
                         {singleMenu.name}
-                        <br />
                       </p>
                     </div>
                   );
                 })}
               </div>
             </div>
-            <img src="./static/icons/balanceNav.png" alt="" width={"80%"} style={{ margin: "auto", cursor: "pointer" }} />
-            <img src="./static/icons/create.png" alt="" width={"80%"} style={{ margin: "auto", cursor: "pointer" }} onClick={() => {
+            <Col>
+              <Card style={{ margin: "10%", backgroundColor: "#282828"}} className='border-0'>
+                <Card.Body className="card-body" style={{display:"flex",justifyContent:"space-between",borderRadius:"10px"}}>
+                  <span><img src="./static/icons/dollar.png" alt="" /> Balance</span>
+                  <span>$100.00</span>
+                </Card.Body>
+              </Card>
+            </Col>
+            <img src="./static/icons/create.png" alt="" width={"75%"} style={{ margin: "auto", cursor: "pointer" }} onClick={() => {
               navigate("/newlabel");
             }} />
           </div>
