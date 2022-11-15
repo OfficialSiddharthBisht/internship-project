@@ -84,11 +84,12 @@ function Dashboard() {
           {
             cardsData.map((card, index) => {
               return (
-                <Col style={{
+                <Col responsive="sm" style={{
                   backgroundImage: `${card.bg}`,
                   display: "flex",
                   justifyContent: "space-between",
-                  color: "#FFFFFF", padding: "15px",
+                  color: "#FFFFFF",
+                  padding: "9px",
                   backgroundRepeat: "no-repeat",
                   borderRadius: "10px",
                   margin: "10px"
