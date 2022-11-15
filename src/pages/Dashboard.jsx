@@ -3,6 +3,32 @@ import { Container, Row, Col, Card, Table } from 'react-bootstrap'
 import Header from '../layout/Header';
 
 function Dashboard() {
+  const [cardsData, setCardsData] = useState([
+    {
+      title: "Total Orders",
+      num: "2103",
+      bg: "url('./static/background/bgTotalOrders.png')",
+      icon: "./static/background/iconTotalOrders.png",
+    },
+    {
+      title: "Balance",
+      num: "$2120.40",
+      bg: "url('./static/background/bgBalance.png')",
+      icon: "./static/background/iconBalance.png",
+    },
+    {
+      title: "Total Deposited",
+      num: "$52 000.60",
+      bg: "url('./static/background/bgDeposit.png')",
+      icon: "./static/background/iconDeposit.png",
+    },
+    {
+      title: "Tickets",
+      num: "2103",
+      bg: "url('./static/background/bgTickets.png')",
+      icon: "./static/background/iconTickets.png",
+    }
+  ])
   const [latestOrders, setLatestOrders] = useState([
     {
       orderId: "#488183",
@@ -55,18 +81,29 @@ function Dashboard() {
       <Container>
         <h5>Overview</h5>
         <Row>
-          <Col>
-              <img src="./static/icons/1.png" alt="" width={"250px"}/>
-          </Col>
-          <Col>
-              <img src="./static/icons/2.png" alt="" width={"250px"}/>
-          </Col>
-          <Col>
-              <img src="./static/icons/3.png" alt="" width={"250px"}/>
-          </Col>
-          <Col>
-              <img src="./static/icons/4.png" alt="" width={"250px"}/>
-          </Col>
+          {
+            cardsData.map((card, index) => {
+              return (
+                <Col style={{
+                  backgroundImage: `${card.bg}`,
+                  display: "flex",
+                  justifyContent: "space-between",
+                  color: "#FFFFFF", padding: "15px",
+                  backgroundRepeat: "no-repeat",
+                  borderRadius: "10px",
+                  margin:"10px"
+                }}>
+                  <span>
+                    <h5>{card.title}</h5>
+                    <h3>{card.num}</h3>
+                  </span>
+                  <span>
+                    <img src= {card.icon} alt="" />
+                  </span>
+                </Col>
+              )
+            })
+          }
         </Row>
       </Container>
       <br />
@@ -76,7 +113,7 @@ function Dashboard() {
       </Card.Title>
       <br />
       <Card className='border-0'>
-        <Card.Body>  
+        <Card.Body>
           <Table className='table table-borderless'>
             <thead>
               <tr>
@@ -146,13 +183,13 @@ function Dashboard() {
           </Col>
           <Col>
             <Card className='border-0'>
-              <Card.Body className='card-body' style={{backgroundColor:"#1E1E1E"}}>
+              <Card.Body className='card-body' style={{ backgroundColor: "#1E1E1E" }}>
                 <Card.Title>Support</Card.Title>
                 <Container>
                   <Row>
                     <Col>
                       <Card className='border-0'>
-                        <Card.Body className='card-body' style={{backgroundColor:" #282828",border:"none"}}>
+                        <Card.Body className='card-body' style={{ backgroundColor: " #282828", border: "none" }}>
                           <Card.Title style={{ textAlign: "center" }}><h5>FAQ</h5></Card.Title>
                           <Card.Text style={{ textAlign: "center" }}>
                             What you should know, basing on what we have been asked about <br />
@@ -162,9 +199,9 @@ function Dashboard() {
                       </Card>
                     </Col>
                     <Col>
-                      <Row style={{backgroundColor:"#1E1E1E"}}>
-                        <Card style={{backgroundColor:"#1E1E1E"}}>
-                          <Card.Body className='card-body'  style={{backgroundColor:" #282828",border:"none"}} >
+                      <Row style={{ backgroundColor: "#1E1E1E" }}>
+                        <Card style={{ backgroundColor: "#1E1E1E" }}>
+                          <Card.Body className='card-body' style={{ backgroundColor: " #282828", border: "none" }} >
                             <Card.Text>
                               <Row>
                                 <Col> <img src="./static/icons/discord.png" alt="" /> </Col>
@@ -178,8 +215,8 @@ function Dashboard() {
                         </Card>
                       </Row>
                       <Row>
-                        <Card style={{backgroundColor:"#1E1E1E",borderRadius:"10px"}}>
-                          <Card.Body className='card-body'  style={{backgroundColor:" #282828",border:"none"}}>
+                        <Card style={{ backgroundColor: "#1E1E1E", borderRadius: "10px" }}>
+                          <Card.Body className='card-body' style={{ backgroundColor: " #282828", border: "none" }}>
                             <Card.Text>
                               <Row>
                                 <Col> <img src="./static/icons/telegram.png" alt="" /> </Col>
