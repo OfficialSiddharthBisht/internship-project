@@ -4,20 +4,27 @@ import {Button, Card, Row, Col, InputGroup, FloatingLabel,Form,Container} from '
 function Signup() {
   return (
     <>
-      <Card className="text-center" style={{ width: "50%", margin: "auto", backgroundColor: "#404040", marginTop: "140px", minHeight: "400px",background: "linear-gradient(92.01deg, #42A04B 0%, #06AC70 100%)" }}>
+      <Card className="text-center border-0" style={{
+       backgroundColor:'#0F0F0F',
+       boxSizing:"border-box",
+       alignItems:"center",
+       border: "1px solid #404040", 
+       marginTop: "80px",
+       minHeight: "400px",
+       }}>
         <Card.Body>
           <Card.Text>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <span>
-                <img src="./static/icons/logo.png" alt="" width={"40px"} height={"40px"} />
-                <span style={{ fontSize: "40px", color: "#FFFFFF" }}>New Account</span>
+                <img src="./static/icons/logo.png" alt="" width={"34px"} height={"34px"} />
+                <span style={{ fontSize: "28px", color: "#FFFFFF" }}>New Account</span>
               </span>
-              <span><h6 style={{color: "#FF7A49"}}>Sign In</h6></span>
+              <span style={{color: "#FF7A49"}}>Sign In</span>
             </div>
             <br />
             <Col>
               <InputGroup size="sm" className="mb-3">
-                <img src="./static/icons/username.png" alt="" width={"55px"} height={"55px"} style={{ margin: "8px" }} />
+                <img src="./static/icons/username.png" alt="" width={"45px"} height={"45px"} style={{ margin: "7px" }} />
                 <FloatingLabel
                   controlId="floatingInput"
                   label="Username"
@@ -31,7 +38,7 @@ function Signup() {
             </Col>
             <Col>
               <InputGroup size="sm" className="mb-3">
-                <img src="./static/icons/email.png" alt="" width={"55px"} height={"55px"} style={{ margin: "8px" }} />
+                <img src="./static/icons/email.png" alt="" width={"45px"} height={"45px"} style={{ margin: "7px" }} />
                 <FloatingLabel
                   controlId="floatingInput"
                   label="Email"
@@ -45,7 +52,7 @@ function Signup() {
             </Col>
             <Col>
               <InputGroup size="sm" className="mb-3">
-                <img src="./static/icons/password.png" alt="" width={"55px"} height={"55px"} style={{ margin: "8px" }} />
+                <img src="./static/icons/password.png" alt="" width={"45px"} height={"45px"} style={{ margin: "7px" }} />
                 <FloatingLabel
                   controlId="floatingInput"
                   label="Password"
@@ -59,7 +66,7 @@ function Signup() {
             </Col>
             <Col>
               <InputGroup size="sm" className="mb-3">
-                <img src="./static/icons/password.png" alt="" width={"55px"} height={"55px"} style={{ margin: "8px" }} />
+                <img src="./static/icons/password.png" alt="" width={"45px"} height={"45px"} style={{ margin: "7px" }} />
                 <FloatingLabel
                   controlId="floatingInput"
                   label="Repeat Password"
@@ -72,7 +79,7 @@ function Signup() {
               </InputGroup>
             </Col>
           </Card.Text>
-          <Button variant="primary">Create An Account</Button>
+          <Button variant="primary"  style={{width:"100%"}}>Create An Account</Button>
           <br />
           <small>Or sign up with</small>
           <Container>

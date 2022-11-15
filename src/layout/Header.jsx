@@ -10,7 +10,8 @@ function Header() {
             <Form.Group size="sm" className="mb-3 navbar-search" style={{ display: "flex", marginTop: "0px", width: "98%", margin: "auto" }}>
                 <Form.Control type="text" className='border-0' placeholder="Search by ID, To Name, From Name.." />
                 <img src="./static/icons/notifybtn.png" alt="" style={{ margin: "0px 5px 0px 5px" }} />
-                <Modal size='lg'
+                <Modal 
+                    // size='lg'
                     isOpen={modal}
                     toggle={() => setModal(false)}
                 >

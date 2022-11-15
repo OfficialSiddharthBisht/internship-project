@@ -3,22 +3,21 @@ import { Button, Card, Row, Col, InputGroup, FloatingLabel, Form, Container } fr
 
 function Login() {
   return (
-    <div style={{backgroundColor:"black"}}>
-      <Card className="text-center" style={{
-       backgroundColor:'black',
+    <div>
+      <Card className="text-center border-0" style={{
+       backgroundColor:'#0F0F0F',
        boxSizing:"border-box",
        alignItems:"center",
        border: "1px solid #404040", 
-       background:"url('./static/background/bg-login-signup-png')",
        marginTop: "80px",
-       minHeight: "400px",
-       background: "linear-gradient(92.01deg, #42A04B 0%, #06AC70 100%)" }}>
+       minHeight: "380px",
+       }}>
         <Card.Body>
           <Card.Text>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <span>
                 <img src="./static/icons/logo.png" alt="" width={"35px"} height={"30px"} />
-                <span style={{ fontSize: "30px", color: "#FFFFFF" }}>Account</span>
+                <span style={{ fontSize: "28px", color: "#FFFFFF" }}>Account</span>
               </span>
               <span style={{ color: "#FF7A49" }}>Sign Up</span>
             </div>
@@ -58,10 +57,10 @@ function Login() {
           <Container>
             <Row>
               <Col>
-                <img src="./static/icons/telegram3.png" alt="" width={"110px"}/>
+                <img src="./static/icons/telegram3.png" alt="" width={"120px"}/>
               </Col>
               <Col>
-                <img src="./static/icons/google.png" alt="" width={"110px"} />
+                <img src="./static/icons/google.png" alt="" width={"120px"} />
               </Col>
             </Row>
           </Container>

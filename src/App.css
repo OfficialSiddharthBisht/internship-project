@@ -23,3 +23,6 @@ thead{
 td{
     border: none;
 }
+.customClass{
+    background-color: red;
+}

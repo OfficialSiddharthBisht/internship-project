@@ -60,12 +60,11 @@ export default function MainLayout() {
   ]);
 
   const [selectedMenu, setselectedMenu] = useState(menus[0]);
-
+// -------------------------------------------------------
   const mobileMenu = () => {
-    console.log("mobile menu called");
     return (
       <>
-        <div className="d-flex align-items-center container w-100 p-3 sideNavDark">
+        <div className="d-flex align-items-center container w-100 p-3">
           <div className="flex-fill ms-2">
             <a
               className="navbar-brand"
@@ -74,11 +73,7 @@ export default function MainLayout() {
                 navigate("/");
               }}
             >
-              <img src="./static/icons/theLogo.png"
-                alt="logo"
-                className="img-fluid"
-                style={{ maxWidth: "15rem" }}
-              />
+              <img src="./static/icons/theLogo.png" alt="Logo" className="img-fluid" style={{ maxWidth: "15rem" }} />
             </a>
           </div>
 
@@ -89,9 +84,7 @@ export default function MainLayout() {
             data-bs-target="#offcanvasRight"
             aria-controls="offcanvasRight"
           >
-            <svg  style={{ maxWidth: "2rem"}}  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-            </svg>
+            <img src="./static/icons/menu.png" alt="=" className="img-fluid" style={{ maxWidth: "2rem" }} />
           </button>
         </div>
 
@@ -101,9 +94,9 @@ export default function MainLayout() {
               <img
                 onClick={() => {
                   navigate("/");
-                  closeMobileMenuRef.current.click();
+                  // closeMobileMenuRef.current.click();
                 }}
-                src="./static/images/logo.svg"
+                src="./static/icons/theLogo.png"
                 alt="Logo"
                 className="img-fluid"
               />
@@ -125,16 +118,19 @@ export default function MainLayout() {
                     <div
                       className={
                         selectedMenu.name == singleMenu.name
-                          ? "d-flex align-items-center bg-primary p-2 rounded text-white mb-2 cp"
+                          ? "d-flex align-items-center bg-primary p-2 rounded mb-2 cp"
                           : "d-flex align-items-center menu p-2 rounded text-dark mb-2 cp"
                       }
                       onClick={() => {
                         setselectedMenu(singleMenu);
                         navigate(singleMenu.link);
-                        closeMobileMenuRef.current.click();
+                        // closeMobileMenuRef.current.click();
                       }}
                     >
-                      <img src={singleMenu.icon} alt="" />
+                      <div style={{ marginLeft: "0.4rem" }}>
+                        <img src= {singleMenu.icon} alt="" />
+                      </div>
+
                       <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
                         {singleMenu.name}
                       </p>
@@ -149,12 +145,13 @@ export default function MainLayout() {
     );
   };
 
+// --------------------------------------------------
   return (
     <>
       <div className={isMobile ? "" : "d-flex"}>
         <div className="d-lg-none">{mobileMenu()}</div>
 
-        <nav className="d-none d-lg-block sideNavDark" style={{ position: "fixed" }}>
+        <nav className="d-none d-lg-block" style={{ position: "fixed" }}>
           <div style={{ display: "flex", flexDirection: "column", minWidth: "275px", minHeight: "100vh" }}>
             <div className="p-4">
               <a href="/">
@@ -168,7 +165,7 @@ export default function MainLayout() {
                       key={index}
                       className={
                         selectedMenu.name == singleMenu.name
-                          ? "d-flex align-items-center bg-primary p-2 rounded mb-2 cp"
+                          ? "d-flex align-items-center p-2 rounded mb-2 cp"
                           : "d-flex align-items-center menu p-2 rounded mb-2 cp"
                       }
                       style={{ cursor: "pointer" }}
