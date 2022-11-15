@@ -89,7 +89,9 @@ export default function MainLayout() {
             data-bs-target="#offcanvasRight"
             aria-controls="offcanvasRight"
           >
-            <img src="./static/images/menu-bars.svg" alt="=" className="img-fluid" style={{ maxWidth: "2rem" }} />
+            <svg  style={{ maxWidth: "2rem"}}  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+            </svg>
           </button>
         </div>
 
@@ -186,8 +188,8 @@ export default function MainLayout() {
               </div>
             </div>
             <Col>
-              <Card style={{ margin: "10%", backgroundColor: "#282828"}} className='border-0'>
-                <Card.Body className="card-body" style={{display:"flex",justifyContent:"space-between",borderRadius:"10px"}}>
+              <Card style={{ margin: "10%", backgroundColor: "#282828" }} className='border-0'>
+                <Card.Body className="card-body" style={{ display: "flex", justifyContent: "space-between", borderRadius: "10px" }}>
                   <span><img src="./static/icons/dollar.png" alt="" /> Balance</span>
                   <span>$100.00</span>
                 </Card.Body>
