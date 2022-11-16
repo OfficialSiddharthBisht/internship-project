@@ -203,9 +203,11 @@ function Dashboard() {
                           <Card.Title style={{ textAlign: "center" }}><h5>FAQ</h5></Card.Title>
                           <Card.Text style={{ textAlign: "center" }}>
                             What you should know, basing on what we have been asked about <br />
-                            <a href="#" onClick={()=>{
+                            <span
+                            style={{color:"blue",cursor:"pointer"}} 
+                            onClick={()=>{
                               navigate('/faq');
-                            }}>Show →</a>
+                            }}>Show →</span>
                           </Card.Text>
                         </Card.Body>
                       </Card>
