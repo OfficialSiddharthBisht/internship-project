@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Table } from 'react-bootstrap'
 import Header from '../layout/Header';
+import { useNavigate } from 'react-router-dom';
 
 function Dashboard() {
+  const navigate = useNavigate();
   const [cardsData, setCardsData] = useState([
     {
       title: "Total Orders",
@@ -110,7 +112,9 @@ function Dashboard() {
       <br />
       <Card.Title style={{ display: "flex", justifyContent: "space-between" }}>
         <span>Latest Orders</span>
-        <span><small style={{ color: "#426CFF" }}>Show All →</small></span>
+        <span><small onClick={()=>{
+          navigate("/labels")
+        }} style={{ color: "#426CFF",cursor:"pointer" }}>Show All →</small></span>
       </Card.Title>
       <br />
       <Card className='border-0'>
@@ -156,7 +160,9 @@ function Dashboard() {
               <Card.Body className='card-body'>
                 <Card.Title style={{ display: "flex", justifyContent: "space-between" }}>
                   <span>Recent Deposits</span>
-                  <span><small style={{ color: "#426CFF" }}>Show All →</small></span>
+                  <span><small onClick={()=>{
+                    navigate('/deposits');
+                  }} style={{ color: "#426CFF",cursor:"pointer" }}>Show All →</small></span>
                 </Card.Title>
                 <Table responsive="sm" className='table table-borderless'>
                   <thead>
@@ -197,7 +203,9 @@ function Dashboard() {
                           <Card.Title style={{ textAlign: "center" }}><h5>FAQ</h5></Card.Title>
                           <Card.Text style={{ textAlign: "center" }}>
                             What you should know, basing on what we have been asked about <br />
-                            <a href="#">Show →</a>
+                            <a href="#" onClick={()=>{
+                              navigate('/faq');
+                            }}>Show →</a>
                           </Card.Text>
                         </Card.Body>
                       </Card>

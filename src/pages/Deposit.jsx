@@ -55,7 +55,7 @@ function Deposit() {
                                 <br />
                                 <InputGroup size="lg">
                                     <Form.Control className='border-0'/>
-                                    <InputGroup.Text>USD</InputGroup.Text>
+                                    <InputGroup.Text style={{ backgroundColor: "#404040", color: "#FFFFFF", margin: "0px" }}>USD</InputGroup.Text>
                                 </InputGroup>
                                 <p>Choose Payment Method</p>
                                 <Row>

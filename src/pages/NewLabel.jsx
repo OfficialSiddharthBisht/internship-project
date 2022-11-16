@@ -33,7 +33,7 @@ function NewLabel() {
                     </Col>
                     <Col>
                     </Col>
-                    <Col>
+                    <Col className='d-sm-none d-md-block'>
                         <span>Be careful when filling in the fields and make sure <br /> that you have enough money in your account</span>
                     </Col>
                 </Row>
