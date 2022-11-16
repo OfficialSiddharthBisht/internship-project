@@ -150,7 +150,9 @@ export default function MainLayout() {
   return (
     <>
       <div className={isMobile ? "" : "d-flex"}>
-        <div className="d-lg-none">{mobileMenu()}</div>
+        <div className="d-lg-none">
+          {mobileMenu()}
+        </div>
 
         <nav className="d-none d-lg-block" style={{ position: "fixed" }}>
           <div style={{ display: "flex", flexDirection: "column", minWidth: "275px", minHeight: "100vh" }}>

@@ -22,10 +22,10 @@ function Head(props) {
                 <br />
                 <p>Maybe we have broken this page.<br />Come back to the homepage</p>
               </div>
-              <Row>
-                <Col style={{ marginLeft: "35%" }}>
+              <Col style={{display:"flex",justifyContent:"center"}}>
+                <span>
                   <Button
-                    style={{ background: "#E65425" }}
+                    style={{ background: "#E65425",margin:"10px" }}
                     className='border-0'
                     onClick={() => {
                       navigate("/login");
@@ -33,11 +33,13 @@ function Head(props) {
                   >
                     Logout
                   </Button>
-                </Col>
-                <Col style={{ borderRadius: "5px", marginRight: "35%" }}>
-                  <Button variant="light" onClick={props.onHide} >Cancel</Button>{' '}
-                </Col>
-              </Row>
+                </span>
+                <span >
+                  <Button
+                   style={{margin:"10px"}}
+                   variant="light" onClick={props.onHide} >Cancel</Button>{' '}
+                </span>
+              </Col>
             </Card.Text>
           </Card.Body>
         </Card>

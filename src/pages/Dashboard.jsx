@@ -8,25 +8,25 @@ function Dashboard() {
   const [cardsData, setCardsData] = useState([
     {
       title: "Total Orders",
-      num: "2103",
+      num: "213",
       bg: "url('./static/background/bgTotalOrders.png')",
       icon: "./static/background/iconTotalOrders.png",
     },
     {
       title: "Balance",
-      num: "$2120.40",
+      num: "$21.40",
       bg: "url('./static/background/bgBalance.png')",
       icon: "./static/background/iconBalance.png",
     },
     {
       title: "Total Deposited",
-      num: "$52 000.60",
+      num: "$52.60",
       bg: "url('./static/background/bgDeposit.png')",
       icon: "./static/background/iconDeposit.png",
     },
     {
       title: "Tickets",
-      num: "2103",
+      num: "203",
       bg: "url('./static/background/bgTickets.png')",
       icon: "./static/background/iconTickets.png",
     }
