@@ -125,7 +125,7 @@ function Support() {
                                         <textarea type={"text"} className="form-control border-0" placeholder="Message" style={{ height: "150px" }} />
                                     </div>
                                 </Card.Text>
-                                <Button className='border-0' style={{ background: "#E65425", margin: "auto", width: "100%" }}>+ Open Ticket</Button>
+                                <Button className='border-0' style={{ background: "#E65425", margin: "auto", width: "100%",color: "#FFFFFF"}}>+ Open Ticket</Button>
                             </Card.Body>
                         </Card>
                     </Col>

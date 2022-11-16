@@ -106,7 +106,7 @@ function Profile() {
                         <Row>
                             <Col style={{ backgroundColor: "#1E1E1E" }}>
                                 <Card style={{ alignItems: "center", backgroundColor: "#1E1E1E", minWidth: "350px" }}>
-                                    <img src="./static/icons/discord2.png" height={"70px"} width={"70px"} />
+                                    <img src="./static/icons/discord2.png" height={"70px"} width={"70px"} style={{marginTop:"15px"}} />
                                     <Card.Body className='card-body' style={{ backgroundColor: "#1E1E1E", border: "none" }}>
                                         <Card.Title>Login with Discord</Card.Title>
                                         <Card.Text>
@@ -124,7 +124,7 @@ function Profile() {
                             </Col>
                             <Col style={{ backgroundColor: "#1E1E1E" }}>
                                 <Card style={{ alignItems: "center", backgroundColor: "#1E1E1E" }}>
-                                    <img src="./static/icons/telegram2.png" height={"70px"} width={"70px"} />
+                                    <img src="./static/icons/telegram2.png" height={"70px"} width={"70px"} style={{marginTop:"15px"}}/>
                                     <Card.Body className='card-body' style={{ backgroundColor: "#1E1E1E", border: "none" }}>
                                         <Card.Title>Login with Telegram</Card.Title>
                                         <Card.Text>

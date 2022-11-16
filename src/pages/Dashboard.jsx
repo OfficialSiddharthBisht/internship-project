@@ -89,10 +89,10 @@ function Dashboard() {
                   display: "flex",
                   justifyContent: "space-between",
                   color: "#FFFFFF",
-                  padding: "9px",
+                  padding: "7px",
                   backgroundRepeat: "no-repeat",
                   borderRadius: "10px",
-                  margin: "10px"
+                  margin: "12px"
                 }}>
                   <span>
                     <h5>{card.title}</h5>
@@ -151,7 +151,7 @@ function Dashboard() {
       <br />
       <Container>
         <Row>
-          <Col>
+          <Col >
             <Card className='border-0'>
               <Card.Body className='card-body'>
                 <Card.Title style={{ display: "flex", justifyContent: "space-between" }}>
@@ -223,7 +223,7 @@ function Dashboard() {
                           <Card.Body className='card-body' style={{ backgroundColor: " #282828", border: "none" }}>
                             <Card.Text>
                               <Row>
-                                <Col> <img src="./static/icons/telegram.png" alt=""/> </Col>
+                                <Col> <img src="./static/icons/telegram.png" alt="" /> </Col>
                                 <Col>
                                   Join <br />
                                   Telegram Live Chat
