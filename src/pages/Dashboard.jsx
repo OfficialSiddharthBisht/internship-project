@@ -84,7 +84,7 @@ function Dashboard() {
           {
             cardsData.map((card, index) => {
               return (
-                <Col responsive="sm" style={{
+                <Col key={index} responsive="sm" style={{
                   backgroundImage: `${card.bg}`,
                   display: "flex",
                   justifyContent: "space-between",
@@ -130,7 +130,7 @@ function Dashboard() {
               {
                 latestOrders.map((el, index) => {
                   return (
-                    <tr>
+                    <tr key={index}>
                       <td>{el.orderId}</td>
                       <td>{el.trackingId}</td>
                       <td>{el.dateAndTime}</td>
@@ -171,7 +171,7 @@ function Dashboard() {
                     {
                       recentDepositsData.map((el, index) => {
                         return (
-                          <tr>
+                          <tr key={index}>
                             <td>{el.amount}</td>
                             <td>{el.method}</td>
                             <td>{el.dateAndTime}</td>

@@ -146,7 +146,7 @@ function Deposit() {
                                             {
                                                 depositHistoryData.map((el, index) => {
                                                     return (
-                                                        <tr>
+                                                        <tr key={index}>
                                                             <td style={{ color: "#FF7A49" }}>₹{el.amount}</td>
                                                             <td style={{ color: "#FFFFFF" }}>{el.method}</td>
                                                             <td style={{ color: "#656565" }}>{el.Date}</td>

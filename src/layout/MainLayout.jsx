@@ -113,9 +113,10 @@ export default function MainLayout() {
           <div className="offcanvas-body pt-0 pe-4">
             <div className="mobile-menu">
               <ul className="navbar-nav">
-                {menus.map((singleMenu) => {
+                {menus.map((singleMenu,index) => {
                   return (
                     <div
+                      key={index}
                       className={
                         selectedMenu.name == singleMenu.name
                           ? "d-flex align-items-center bg-primary p-2 rounded mb-2 cp"

@@ -36,7 +36,7 @@ function NewLabel() {
                                     {
                                         senderReceiverInfo.map((el, index) => {
                                             return (
-                                                <Col>
+                                                <Col key={index}>
                                                     <InputGroup size="sm" className="mb-3">
                                                         <Form.Control aria-label="Small"
                                                             className='border-0'
@@ -59,7 +59,7 @@ function NewLabel() {
                                     {
                                         senderReceiverInfo.map((el, index) => {
                                             return (
-                                                <Col>
+                                                <Col key={index}>
                                                     <InputGroup size="sm" className="mb-3">
                                                         <Form.Control aria-label="Small"
                                                             aria-describedby="inputGroup-sizing-sm"
@@ -100,7 +100,7 @@ function NewLabel() {
                                     {
                                         generalDataMetric.map((el, index) => {
                                             return (
-                                                <Col>
+                                                <Col key={index}>
                                                     <Form.Label htmlFor="basic-url">{el.metric}</Form.Label>
                                                     <InputGroup size="sm" className="mb-3">
                                                         <Form.Control aria-label="Small"

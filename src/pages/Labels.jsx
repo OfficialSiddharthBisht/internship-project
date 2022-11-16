@@ -15,7 +15,7 @@ function Labels() {
                                 {
                                     labelData.map((data, index) => {
                                         return (
-                                            <tr>
+                                            <tr key={index}>
                                                 <td><img src="./static/icons/status.png" alt="" /></td>
                                                 <td>
                                                     Order ID:#4885271 <br />

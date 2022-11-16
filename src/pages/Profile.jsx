@@ -41,7 +41,7 @@ function Profile() {
                                     {
                                         profileInfo.map((el, index) => {
                                             return (
-                                                <Col>
+                                                <Col key={index}>
                                                     <InputGroup size="sm" className="mb-3">
                                                         <img src={el.icon} alt="" width={"45px"} height={"45px"} style={{ margin: "8px" }} />
                                                         <FloatingLabel
