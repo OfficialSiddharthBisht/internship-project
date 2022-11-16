@@ -5,8 +5,8 @@ function _404() {
     <Card className="text-center" style={{ border: "none", height: "100vh" }}>
       <Card.Body style={{ backgroundColor: "#0F0F0F" }}>
         <Card.Text>
-          <img src="./static/icons/logo.png" alt="" width={"40px"} height={"40px"} />
-          <span style={{ fontSize: "40px" }}>LABELFALCON</span>
+          <img src="./static/illustrations/error.svg" alt="" />
+          <span style={{ fontSize: "26px" }}>LABELFALCON</span>
           <div>
             <img src="./static/icons/404.png" alt="404" />
             <h3>Oops... Page Not Found</h3>

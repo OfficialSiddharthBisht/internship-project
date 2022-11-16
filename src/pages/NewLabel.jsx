@@ -27,10 +27,21 @@ function NewLabel() {
         <>
             <Header />
             <Container>
+                <Row style={{display:"flex",justifyContent:"space-between"}}>
+                    <Col >
+                        <h3>New Label</h3>
+                    </Col>
+                    <Col>
+                    </Col>
+                    <Col>
+                        <span>Be careful when filling in the fields and make sure <br /> that you have enough money in your account</span>
+                    </Col>
+                </Row>
+                <br />
                 <Row>
                     <Col>
                         <Card className='border-0'>
-                            <Card.Body className='card-body' style={{minWidth:"300px"}}>
+                            <Card.Body className='card-body' style={{ minWidth: "300px" }}>
                                 <Card.Title>① Sender</Card.Title>
                                 <Card.Text>
                                     {
@@ -52,7 +63,7 @@ function NewLabel() {
                         </Card>
                     </Col>
                     <Col>
-                        <Card className='border-0' style={{minWidth:"300px"}}>
+                        <Card className='border-0' style={{ minWidth: "300px" }}>
                             <Card.Body className='card-body'>
                                 <Card.Title>② Recipient</Card.Title>
                                 <Card.Text>
@@ -75,7 +86,7 @@ function NewLabel() {
                         </Card>
                     </Col>
                     <Col>
-                        <Card className='border-0' style={{minWidth:"300px"}}>
+                        <Card className='border-0' style={{ minWidth: "300px" }}>
                             <Card.Body className='card-body'>
                                 <Card.Title>③General Data</Card.Title>
                                 <Card.Text>
