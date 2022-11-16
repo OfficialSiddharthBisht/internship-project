@@ -62,19 +62,19 @@ function Dashboard() {
       amount: "1000.00",
       method: "Crypto",
       dateAndTime: "09/28/2022",
-      status: true,
+      status: "./static/icons/depositTrue.png",
     },
     {
       amount: "265.00",
       method: "Credit Card",
       dateAndTime: "12/12/2022",
-      status: false,
+      status: "./static/icons/depositFalse.png",
     },
     {
       amount: "120.00",
       method: "Credit Card",
       dateAndTime: "01/06/2022",
-      status: true,
+      status: "./static/icons/depositTrue.png",
     }
   ]);
   return (
@@ -181,7 +181,7 @@ function Dashboard() {
                             <td>{el.amount}</td>
                             <td>{el.method}</td>
                             <td>{el.dateAndTime}</td>
-                            <td>{`${el.status}`}</td>
+                            <td><img src={el.status} alt="" /></td>
                           </tr>
                         )
                       })
