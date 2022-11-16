@@ -89,7 +89,7 @@ export default function MainLayout() {
         </div>
 
         <div className="offcanvas offcanvas-end w-100" tabIndex={-1} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-          <div className="offcanvas-header pt-3">
+          <div className="offcanvas-header pt-3 bg-black" style={{color:"#FFFFFF",fontWeight:"bold"}}>
             <h5 id="offcanvasRightLabel">
               <img
                 onClick={() => {
@@ -110,7 +110,7 @@ export default function MainLayout() {
               data-bs-dismiss="offcanvas"
             />
           </div>
-          <div className="offcanvas-body pt-0 pe-4">
+          <div className="offcanvas-body pt-0 pe-4 bg-black">
             <div className="mobile-menu">
               <ul className="navbar-nav">
                 {menus.map((singleMenu,index) => {
@@ -120,7 +120,7 @@ export default function MainLayout() {
                       className={
                         selectedMenu.name == singleMenu.name
                           ? "d-flex align-items-center bg-primary p-2 rounded mb-2 cp"
-                          : "d-flex align-items-center menu p-2 rounded text-dark mb-2 cp"
+                          : "d-flex align-items-center menu p-2 rounded mb-2 cp"
                       }
                       onClick={() => {
                         setselectedMenu(singleMenu);
