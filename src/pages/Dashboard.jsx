@@ -128,6 +128,7 @@ function Dashboard() {
                 <th>Stage</th>
                 <th>Status</th>
                 <th>Download</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -220,8 +221,7 @@ function Dashboard() {
                               <Row>
                                 <Col> <img src="./static/icons/discord.png" alt="" /> </Col>
                                 <Col>
-                                  Join <br />
-                                  <span>Discord Server</span>
+                                  Join Discord Server
                                 </Col>
                               </Row>
                             </Card.Text>
@@ -235,8 +235,7 @@ function Dashboard() {
                               <Row>
                                 <Col> <img src="./static/icons/telegram.png" alt="" /> </Col>
                                 <Col>
-                                  Join <br />
-                                  Telegram Live Chat
+                                  Join Telegram Live Chat
                                 </Col>
                               </Row>
                             </Card.Text>

@@ -152,15 +152,15 @@ export default function MainLayout() {
                 <img src="./static/icons/theLogo.png" alt="" />
               </a>
               <hr />
-              <div style={{ marginTop: "2rem" }}>
+              <div style={{ marginTop: "1rem" }}>
                 {menus.map((singleMenu, index) => {
                   return (
                     <div
                       key={index}
                       className={
                         selectedMenu.name == singleMenu.name
-                          ? "d-flex align-items-center p-2 rounded mb-2 cp"
-                          : "d-flex align-items-center menu p-2 rounded mb-2 cp"
+                          ? "d-flex align-items-center p-2 rounded cp"
+                          : "d-flex align-items-center menu p-2 rounded cp"
                       }
                       style={{ cursor: "pointer" }}
                       onClick={() => {

@@ -34,7 +34,7 @@ function NewLabel() {
                     <Col>
                     </Col>
                     <Col className='d-sm-none d-md-block'>
-                        <span>Be careful when filling in the fields and make sure <br /> that you have enough money in your account</span>
+                        <p style={{maxHeight:"85px",overflow:"hidden"}}>Be careful when filling in the fields.</p>
                     </Col>
                 </Row>
                 <br />
@@ -124,11 +124,12 @@ function NewLabel() {
                                         })
                                     }
                                 </Card.Text>
-                                <Button variant="light">
+                                <Button variant="dark">
                                     <img src="./static/icons/price.png" alt="" />
                                     Price: <span style={{ color: "#E65425" }}>$0.00</span>
                                 </Button>
-                                <small>Questions? FAQ</small>
+                                <small> </small>
+                                <small>Questions? <span style={{textDecoration:"underline",fontWeight:"bold",color:"#FFFFFF"}}>FAQ</span></small>
                             </Card.Body>
                         </Card>
                     </Col>
