@@ -1,7 +1,9 @@
 import React from 'react'
 import { Button, Card, Row, Col, InputGroup, FloatingLabel, Form, Container } from 'react-bootstrap';
+import {useNavigate} from 'react-router-dom';
 
 function Login() {
+  const navigate= useNavigate();
   return (
     <div>
       <Card className="text-center border-0" style={{
@@ -51,7 +53,9 @@ function Login() {
               </InputGroup>
             </Col>
           </Card.Text>
-          <Button variant="primary" style={{width:"100%"}}>Sign In</Button>
+          <Button variant="primary" style={{width:"100%"}} onClick ={()=>{
+            navigate("/")
+          }} >Sign In</Button>
           <br />
           <small>Or sign in with</small>
           <Container>
