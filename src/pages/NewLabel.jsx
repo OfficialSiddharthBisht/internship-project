@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, Card, Form, InputGroup, Button } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 import Header from '../layout/Header'
 function NewLabel() {
+    const navigate = useNavigate();
     const [senderReceiverInfo, setSenderReceiverInfo] = useState([
         "Name", "Phone", "Address line 1", "Address line 2", "Address line 3", "City", "ZIP", "State"
     ])
@@ -129,14 +131,16 @@ function NewLabel() {
                                     Price: <span style={{ color: "#E65425" }}>$0.00</span>
                                 </Button>
                                 <small> </small>
-                                <small>Questions? <span style={{textDecoration:"underline",fontWeight:"bold",color:"#FFFFFF"}}>FAQ</span></small>
+                                <small>Questions? <span style={{textDecoration:"underline",fontWeight:"bold",color:"#FFFFFF"}} onClick ={()=>{
+                                    navigate('/faq');
+                                }}>FAQ</span></small>
                             </Card.Body>
                         </Card>
                     </Col>
                 </Row>
                 <br />
                 <Row>
-                    <Button variant="light" style={{ border: "1px dashed #E65425", color: "#E65425" }}>+ Create New Label</Button>{' '}
+                    <Button variant="dark" style={{ border: "1px dashed #E65425", color: "#E65425" }} onClick ={()=>{navigate("/labels")}}>+ Create New Label</Button>{' '}
                 </Row>
             </Container>
         </>
