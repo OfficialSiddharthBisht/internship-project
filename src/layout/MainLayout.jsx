@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Card, Col } from "react-bootstrap";
 import { Outlet, useNavigate } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
 export default function MainLayout() {
   const navigate = useNavigate();
@@ -60,7 +62,10 @@ export default function MainLayout() {
   ]);
 
   const [selectedMenu, setselectedMenu] = useState(menus[0]);
-// -------------------------------------------------------
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const mobileMenu = () => {
     return (
       <>
@@ -80,73 +85,59 @@ export default function MainLayout() {
           <button
             className="btn navbar-toggler"
             type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"
+            onClick={handleShow}
           >
             <img src="./static/icons/menu.png" alt="=" className="img-fluid" style={{ maxWidth: "2rem" }} />
           </button>
         </div>
+        <Offcanvas show={show} onHide={handleClose} className='bg-black'>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>
+              <img closeButton src="./static/icons/theLogo.png" alt="logo" onClick={() => {
+                navigate("/");
+                handleClose();
+              }} />
+            </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <div className="pt-0 pe-4 bg-black">
+              <div className="mobile-menu">
+                <ul className="navbar-nav">
+                  {menus.map((singleMenu, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className={
+                          selectedMenu.name == singleMenu.name
+                            ? "d-flex align-items-center bg-primary p-2 rounded mb-2 cp"
+                            : "d-flex align-items-center menu p-2 rounded mb-2 cp"
+                        }
+                        onClick={() => {
+                          setselectedMenu(singleMenu);
+                          navigate(singleMenu.link);
+                          handleClose();
+                        }}
+                      >
+                        <div style={{ marginLeft: "0.4rem" }}>
+                          <img src={singleMenu.icon} alt="" />
+                        </div>
 
-        <div className="offcanvas offcanvas-end w-100" tabIndex={-1} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-          <div className="offcanvas-header pt-3 bg-black" style={{color:"#FFFFFF",fontWeight:"bold"}}>
-            <h5 id="offcanvasRightLabel">
-              <img
-                onClick={() => {
-                  navigate("/");
-                  closeMobileMenuRef.current.click();
-                }}
-                src="./static/icons/theLogo.png"
-                alt="Logo"
-                className="img-fluid"
-              />
-            </h5>
-            <img
-              src="./static/images/close.svg"
-              alt="Logo"
-              ref={closeMobileMenuRef}
-              className="img-fluid"
-              style={{ width: 40, cursor: "pointer" }}
-              data-bs-dismiss="offcanvas"
-            />
-          </div>
-          <div className="offcanvas-body pt-0 pe-4 bg-black">
-            <div className="mobile-menu">
-              <ul className="navbar-nav">
-                {menus.map((singleMenu,index) => {
-                  return (
-                    <div
-                      key={index}
-                      className={
-                        selectedMenu.name == singleMenu.name
-                          ? "d-flex align-items-center bg-primary p-2 rounded mb-2 cp"
-                          : "d-flex align-items-center menu p-2 rounded mb-2 cp"
-                      }
-                      onClick={() => {
-                        setselectedMenu(singleMenu);
-                        navigate(singleMenu.link);
-                        closeMobileMenuRef.current.click();
-                      }}
-                    >
-                      <div style={{ marginLeft: "0.4rem" }}>
-                        <img src= {singleMenu.icon} alt="" />
+                        <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
+                          {singleMenu.name}
+                        </p>
                       </div>
-
-                      <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
-                        {singleMenu.name}
-                      </p>
-                    </div>
-                  );
-                })}
-              </ul>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
-          </div>
-        </div>
+          </Offcanvas.Body>
+        </Offcanvas>
       </>
     );
   };
 
-// --------------------------------------------------
+  // --------------------------------------------------
   return (
     <>
       <div className={isMobile ? "" : "d-flex"}>

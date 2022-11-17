@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Row, Col, Card, Form, InputGroup, FloatingLabel, Button } from 'react-bootstrap'
+import { Container, Row, Col, Card, Form, InputGroup, Button } from 'react-bootstrap'
 import Header from '../layout/Header'
 function NewLabel() {
     const [senderReceiverInfo, setSenderReceiverInfo] = useState([
