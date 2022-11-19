@@ -110,17 +110,17 @@ function Dashboard() {
         </Row>
       </Container>
       <br />
-      <Card.Title style={{ display: "flex", justifyContent: "space-between" }}>
-        <span>Latest Orders</span>
-        <span><small onClick={()=>{
-          navigate("/labels")
-        }} style={{ color: "#426CFF",cursor:"pointer" }}>Show All →</small></span>
-      </Card.Title>
-      <br />
-      <Card className='border-0'>
-        <Card.Body>
+      <Card className='border-0' style={{ backgroundColor: "#1E1E1E", borderRadius: "10px" }}>
+        <Card.Title style={{ display: "flex", margin: "10px", justifyContent: "space-between", backgroundColor: "#1E1E1E", borderRadius: "10px" }}>
+          <span >Latest Orders</span>
+          <span><small onClick={() => {
+            navigate("/labels")
+          }} style={{ color: "#426CFF", cursor: "pointer" }}>Show All →</small></span>
+        </Card.Title>
+        <br />
+        <Card.Body style={{ backgroundColor: "#1E1E1E", borderRadius: "10px" }}>
           <Table responsive="sm" className='table table-borderless'>
-            <thead>
+            <thead style={{ borderRadius: "10px" }}>
               <tr>
                 <th>Order Id</th>
                 <th>Tracking ID</th>
@@ -158,12 +158,12 @@ function Dashboard() {
         <Row>
           <Col >
             <Card className='border-0'>
-              <Card.Body className='card-body'>
+              <Card.Body className='card-body' style={{ backgroundColor: "#1E1E1E", borderRadius: "10px" }}>
                 <Card.Title style={{ display: "flex", justifyContent: "space-between" }}>
                   <span>Recent Deposits</span>
-                  <span><small onClick={()=>{
+                  <span><small onClick={() => {
                     navigate('/deposits');
-                  }} style={{ color: "#426CFF",cursor:"pointer" }}>Show All →</small></span>
+                  }} style={{ color: "#426CFF", cursor: "pointer" }}>Show All →</small></span>
                 </Card.Title>
                 <Table responsive="sm" className='table table-borderless'>
                   <thead>
@@ -194,7 +194,7 @@ function Dashboard() {
           </Col>
           <Col>
             <Card className='border-0'>
-              <Card.Body className='card-body' style={{ backgroundColor: "#1E1E1E" }}>
+              <Card.Body className='card-body' style={{ backgroundColor: "#1E1E1E", borderRadius: "10px" }}>
                 <Card.Title>Support</Card.Title>
                 <Container>
                   <Row>
@@ -205,10 +205,10 @@ function Dashboard() {
                           <Card.Text style={{ textAlign: "center" }}>
                             What you should know, basing on what we have been asked about <br />
                             <span
-                            style={{color:"blue",cursor:"pointer"}} 
-                            onClick={()=>{
-                              navigate('/faq');
-                            }}>Show →</span>
+                              style={{ color: "blue", cursor: "pointer" }}
+                              onClick={() => {
+                                navigate('/faq');
+                              }}>Show →</span>
                           </Card.Text>
                         </Card.Body>
                       </Card>

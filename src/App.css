@@ -25,10 +25,7 @@ h5{
     background-color: #3A3A3A;
     border: 20px;
 }
-thead{
-    background-color: "#282828";
-    color: "#656565";
-}
+
 .accordion-item *{
     color: #ABABAB;
     background-color: #1E1E1E;
@@ -37,6 +34,7 @@ thead{
     background-color: #282828;
     border-radius: 10px;
     border: none;
+    color: "#656565";
 }
 td{
     border: none;
