@@ -63,22 +63,14 @@ export default function MainLayout() {
   function lineBreak(x, name, icon) {
     if (x === true) {
       return (
-        <div className="d-flex align-items-center p-2 rounded cp">
-          <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
-            <img src={icon} alt="" style={{ marginRight: "10px", marginLeft: "15px" }} />
-            {name}
-            <hr style={{ color: "white", minWidth: "255px" }} />
-          </p>
+        <div>
+          <hr style={{ color: "white", minWidth: "255px" }} />
+          <br />
         </div>
       );
     }
     return (
-      <div className="d-flex align-items-center p-2 rounded cp">
-        <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
-          <img src={icon} alt="" style={{ marginRight: "10px", marginLeft: "15px" }} />
-          {name}
-        </p>
-      </div>
+      <br />
     )
   }
   const [selectedMenu, setselectedMenu] = useState(menus[0]);
@@ -125,25 +117,26 @@ export default function MainLayout() {
                 <ul className="navbar-nav">
                   {menus.map((singleMenu, index) => {
                     return (
-                      <div
-                        key={index}
-                        className={
-                          selectedMenu.name == singleMenu.name
-                            ? "d-flex align-items-center bg-primary p-2 rounded mb-2 cp"
-                            : "d-flex align-items-center menu p-2 rounded mb-2 cp"
-                        }
-                        onClick={() => {
-                          setselectedMenu(singleMenu);
-                          navigate(singleMenu.link);
-                          handleClose();
-                        }}
-                      >
-                        {/* <div style={{ marginLeft: "2.5rem" }}>
-                          <img src={singleMenu.icon} alt="" />
+                      <div key={index}>
+                        <div
+                          className={
+                            selectedMenu.name == singleMenu.name
+                              ? "d-flex align-items-center text-primary p-2 rounded mb-2 cp"
+                              : "d-flex align-items-center menu p-2 rounded mb-2 cp"
+                          }
+                          onClick={() => {
+                            setselectedMenu(singleMenu);
+                            navigate(singleMenu.link);
+                            handleClose();
+                          }}
+                        >
+                          <div style={{ marginLeft: "2.5rem" }}>
+                            <img src={singleMenu.icon} alt="" />
+                          </div>
+                          <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
+                            {singleMenu.name}
+                          </p>
                         </div>
-                        <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
-                          {singleMenu.name}
-                        </p> */}
                         {lineBreak(index === 0 || index === 3, singleMenu.name, singleMenu.icon)}
                       </div>
                     );
@@ -186,19 +179,26 @@ export default function MainLayout() {
               <div style={{ marginTop: "1rem" }}>
                 {menus.map((singleMenu, index) => {
                   return (
-                    <div
-                      key={index}
-                      className={
-                        selectedMenu.name == singleMenu.name
-                          ? "d-flex align-items-center bg-primary mb-3 rounded cp"
-                          : "d-flex align-items-center menu rounded cp"
-                      }
-                      style={{ cursor: "pointer" }}
-                      onClick={() => {
-                        setselectedMenu(singleMenu);
-                        navigate(singleMenu.link);
-                      }}
-                    >
+                    <div key={index}>
+                      <div
+                        className={
+                          selectedMenu.name == singleMenu.name
+                            ? "d-flex align-items-center text-primary mb-3 rounded cp"
+                            : "d-flex align-items-center menu rounded cp"
+                        }
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          setselectedMenu(singleMenu);
+                          navigate(singleMenu.link);
+                        }}
+                      >
+                        <div style={{ marginLeft: "2.5rem" }}>
+                          <img src={singleMenu.icon} alt="" />
+                        </div>
+                        <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
+                          {singleMenu.name}
+                        </p>
+                      </div>
                       {lineBreak(index === 0 || index === 3, singleMenu.name, singleMenu.icon)}
                     </div>
                   );

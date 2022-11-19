@@ -1,27 +1,26 @@
 import React from 'react'
 import { Button, Card, Row, Col, InputGroup, FloatingLabel, Form, Container } from 'react-bootstrap';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  const navigate= useNavigate();
+  const navigate = useNavigate();
   return (
     <div>
       <Card className="text-center border-0" style={{
-       backgroundColor:'#0F0F0F',
-       boxSizing:"border-box",
-       alignItems:"center",
-       border: "1px solid #404040", 
-       marginTop: "80px",
-       minHeight: "380px",
-       }}>
+        backgroundColor: '#0F0F0F',
+        boxSizing: "border-box",
+        alignItems: "center",
+        border: "1px solid #404040",
+        marginTop: "80px",
+        minHeight: "380px",
+      }}>
         <Card.Body>
           <Card.Text>
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <span>
-                <img src="./static/icons/logo.png" alt="" width={"35px"} height={"30px"} />
-                <span style={{ fontSize: "28px", color: "#FFFFFF" }}>Account</span>
+            <div>
+              <span style={{ display: "flex", alignContent: "space-between", minWidth: "400px", padding: "25px" }}>
+                <img src="./static/icons/loginimg.png" alt="" width={"180px"} />
+                <span style={{ color: "#FF7A49" }}>Sign Up</span>
               </span>
-              <span style={{ color: "#FF7A49" }}>Sign Up</span>
             </div>
             <br />
             <Col>
@@ -53,7 +52,7 @@ function Login() {
               </InputGroup>
             </Col>
           </Card.Text>
-          <Button variant="primary" style={{width:"100%"}} onClick ={()=>{
+          <Button variant="primary" style={{ width: "90%" }} onClick={() => {
             navigate("/")
           }} >Sign In</Button>
           <br />
@@ -61,7 +60,7 @@ function Login() {
           <Container>
             <Row>
               <Col>
-                <img src="./static/icons/telegram3.png" alt="" width={"120px"}/>
+                <img src="./static/icons/telegram3.png" alt="" width={"120px"} />
               </Col>
               <Col>
                 <img src="./static/icons/google.png" alt="" width={"120px"} />
