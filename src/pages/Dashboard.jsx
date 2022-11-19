@@ -206,7 +206,7 @@ function Dashboard() {
                   <Row>
                     <Col>
                       <Card className='border-0'>
-                        <Card.Body className='card-body' style={{ backgroundColor: " #282828", border: "none" }}>
+                        <Card.Body className='card-body' style={{ backgroundColor: " #282828", border: "none", borderRadius: "10px" }}>
                           <Card.Title style={{ textAlign: "center" }}><h5>FAQ</h5></Card.Title>
                           <Card.Text style={{ textAlign: "center" }}>
                             What you should know, basing on what we have been asked about <br />
@@ -222,7 +222,7 @@ function Dashboard() {
                     <Col>
                       <Row style={{ backgroundColor: "#1E1E1E" }}>
                         <Card style={{ backgroundColor: "#1E1E1E" }}>
-                          <Card.Body className='card-body' style={{ backgroundColor: " #282828", border: "none" }} >
+                          <Card.Body className='card-body' style={{ backgroundColor: " #282828", border: "none", borderRadius: "10px" }} >
                             <Card.Text>
                               <Row>
                                 <Col> <img src="./static/icons/discord.png" alt="" /> </Col>
@@ -236,7 +236,7 @@ function Dashboard() {
                       </Row>
                       <Row>
                         <Card style={{ backgroundColor: "#1E1E1E", borderRadius: "10px" }}>
-                          <Card.Body className='card-body' style={{ backgroundColor: " #282828", border: "none" }}>
+                          <Card.Body className='card-body' style={{ backgroundColor: " #282828", border: "none", borderRadius: "10px" }}>
                             <Card.Text>
                               <Row>
                                 <Col> <img src="./static/icons/telegram.png" alt="" /> </Col>

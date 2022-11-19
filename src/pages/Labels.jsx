@@ -8,7 +8,7 @@ function Labels() {
             <Header />
             <h2>Labels History</h2>
             <Card className='border-0'>
-                <Card.Body className='card-body'>
+                <Card.Body className='card-body' style={{ borderRadius: "10px" }}>
                     <Card.Text>
                         <Table responsive="sm" className='table table-borderless'>
                             <tbody>
@@ -50,8 +50,8 @@ function Labels() {
                     </Card.Text>
                     <Card.Footer width={"100%"} className="text-muted">
                         <Row>
-                            <Col style={{borderRadius: "5px" }}>
-                                <Button className='border-0' variant="light" style={{width:"auto"}}> <small>You choose(2)files</small></Button>{' '}
+                            <Col style={{ borderRadius: "5px" }}>
+                                <Button className='border-0' variant="light" style={{ width: "auto" }}> <small>You choose(2)files</small></Button>{' '}
                             </Col>
                             <Col style={{ marginLeft: "20%" }}>
                                 <Button className='border-0' style={{ background: "#E65425" }}>Download as ZIP</Button>

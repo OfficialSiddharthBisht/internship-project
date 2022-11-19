@@ -41,20 +41,20 @@ function Deposit() {
         }
     ])
     return (
-        <>  
+        <>
             <Header />
             <h2>Deposits</h2>
             <Container>
                 <Row>
                     <Col>
                         <Card className='border-0'>
-                            <Card.Body className='card-body'>
+                            <Card.Body className='card-body' style={{ borderRadius: "10px" }}>
                                 <Card.Header style={{ backgroundColor: "#404040", color: "#FFFFFF", margin: "0px" }}>
                                     <h4 >Topup Account</h4>
                                 </Card.Header>
                                 <br />
                                 <InputGroup size="lg">
-                                    <Form.Control className='border-0'/>
+                                    <Form.Control className='border-0' />
                                     <InputGroup.Text style={{ backgroundColor: "#404040", color: "#FFFFFF", margin: "0px" }}>USD</InputGroup.Text>
                                 </InputGroup>
                                 <p>Choose Payment Method</p>
@@ -132,7 +132,7 @@ function Deposit() {
                         <h5>Deposit History</h5>
                         <Container>
                             <Card className='border-0'>
-                                <Card.Body className='card-body'>
+                                <Card.Body className='card-body' style={{ borderRadius: "10px" }}>
                                     <Table responsive="sm" className='table table-borderless '>
                                         <thead>
                                             <tr>
@@ -150,7 +150,7 @@ function Deposit() {
                                                             <td style={{ color: "#FF7A49" }}>₹{el.amount}</td>
                                                             <td style={{ color: "#FFFFFF" }}>{el.method}</td>
                                                             <td style={{ color: "#656565" }}>{el.Date}</td>
-                                                            <td><img src= {el.status} alt="" /></td>
+                                                            <td><img src={el.status} alt="" /></td>
                                                         </tr>
                                                     )
                                                 })
