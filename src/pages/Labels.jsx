@@ -1,6 +1,19 @@
 import React, { useState } from 'react'
 import { Card, Table, ProgressBar, Form, Row, Col, Button } from 'react-bootstrap';
 import Header from '../layout/Header';
+import '../assets/progressBar.css';
+function ProgressBars() {
+    return (
+        <div className="progress-bar-container">
+            <div className="bar">
+                <div className="progress-bar">
+                    <div className='progress'><span ></span></div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 function Labels() {
     let [labelData, setLabelData] = useState([1, 2, 3, 4, 5])
     return (
@@ -26,7 +39,8 @@ function Labels() {
                                                     <small>From: USA,Florida,Miami</small>
                                                 </td>
                                                 <td width={"150px"}>
-                                                    <ProgressBar variant="danger" now={index * 10} />
+                                                    {/* <ProgressBar variant="danger" now={index * 10} /> */}
+                                                    {ProgressBars()}
                                                 </td>
                                                 <td>
                                                     Delivered to Customer
