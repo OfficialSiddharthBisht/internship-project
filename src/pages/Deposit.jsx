@@ -198,8 +198,8 @@ function Deposit() {
                                             <Box py={2} display="flex" justifyContent="flex-end">
                                                 <Pagination
                                                     count={2}
-                                                    size='large'
                                                     color="primary"
+                                                    size='large'
                                                     variant="text"
                                                     onChange={(e, value) => setPage(value)}
                                                 />
