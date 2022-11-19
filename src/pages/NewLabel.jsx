@@ -29,21 +29,21 @@ function NewLabel() {
         <>
             <Header />
             <Container>
-                <Row style={{display:"flex",justifyContent:"space-between"}}>
+                <Row style={{ display: "flex", justifyContent: "space-between" }}>
                     <Col >
                         <h3>New Label</h3>
                     </Col>
                     <Col>
                     </Col>
                     <Col className='d-sm-none d-md-block'>
-                        <p style={{maxHeight:"85px",overflow:"hidden"}}>Be careful when filling in the fields.</p>
+                        <p style={{ maxHeight: "85px", overflow: "hidden" }}>Be careful when filling in the fields.</p>
                     </Col>
                 </Row>
                 <br />
                 <Row>
                     <Col>
                         <Card className='border-0'>
-                            <Card.Body className='card-body' style={{ minWidth: "300px" }}>
+                            <Card.Body className='card-body' style={{ minWidth: "300px", borderRadius: "10px" }}>
                                 <Card.Title>① Sender</Card.Title>
                                 <Card.Text>
                                     {
@@ -65,8 +65,8 @@ function NewLabel() {
                         </Card>
                     </Col>
                     <Col>
-                        <Card className='border-0' style={{ minWidth: "300px" }}>
-                            <Card.Body className='card-body'>
+                        <Card className='border-0'>
+                            <Card.Body className='card-body' style={{ minWidth: "300px", borderRadius: "10px" }}>
                                 <Card.Title>② Recipient</Card.Title>
                                 <Card.Text>
                                     {
@@ -88,8 +88,8 @@ function NewLabel() {
                         </Card>
                     </Col>
                     <Col>
-                        <Card className='border-0' style={{ minWidth: "300px" }}>
-                            <Card.Body className='card-body'>
+                        <Card className='border-0'>
+                            <Card.Body className='card-body' style={{ minWidth: "300px", borderRadius: "10px" }}>
                                 <Card.Title>③General Data</Card.Title>
                                 <Card.Text>
                                     <Col>
@@ -131,7 +131,7 @@ function NewLabel() {
                                     Price: <span style={{ color: "#E65425" }}>$0.00</span>
                                 </Button>
                                 <small> </small>
-                                <small>Questions? <span style={{textDecoration:"underline",fontWeight:"bold",color:"#FFFFFF"}} onClick ={()=>{
+                                <small>Questions? <span style={{ textDecoration: "underline", fontWeight: "bold", color: "#FFFFFF" }} onClick={() => {
                                     navigate('/faq');
                                 }}>FAQ</span></small>
                             </Card.Body>
@@ -140,7 +140,7 @@ function NewLabel() {
                 </Row>
                 <br />
                 <Row>
-                    <Button variant="dark" style={{ border: "1px dashed #E65425", color: "#E65425" }} onClick ={()=>{navigate("/labels")}}>+ Create New Label</Button>{' '}
+                    <Button variant="dark" style={{ border: "1px dashed #E65425", color: "#E65425" }} onClick={() => { navigate("/labels") }}>+ Create New Label</Button>{' '}
                 </Row>
             </Container>
         </>

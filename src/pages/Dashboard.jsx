@@ -48,14 +48,14 @@ function Dashboard() {
       status: "Completed",
       download: "PDF",
     },
-    {
-      orderId: "#145259",
-      trackingId: "987-2438-37",
-      dateAndTime: "09/28/2022 | 12:30 AM",
-      stage: "Trackig Number Created",
-      status: "Cancelled",
-      download: "PDF",
-    },
+    // {
+    //   orderId: "#145259",
+    //   trackingId: "987-2438-37",
+    //   dateAndTime: "09/28/2022 | 12:30 AM",
+    //   stage: "Trackig Number Created",
+    //   status: "Cancelled",
+    //   download: "PDF",
+    // },
   ]);
   const [recentDepositsData, setRecentDepositData] = useState([
     {
@@ -69,6 +69,12 @@ function Dashboard() {
       method: "Credit Card",
       dateAndTime: "12/12/2022",
       status: "./static/icons/depositFalse.png",
+    },
+    {
+      amount: "120.00",
+      method: "Credit Card",
+      dateAndTime: "01/06/2022",
+      status: "./static/icons/depositTrue.png",
     },
     {
       amount: "120.00",
@@ -91,10 +97,10 @@ function Dashboard() {
                   display: "flex",
                   justifyContent: "space-between",
                   color: "#FFFFFF",
-                  padding: "7px",
+                  padding: "18px",
                   backgroundRepeat: "no-repeat",
                   borderRadius: "10px",
-                  margin: "12px"
+                  margin: "7px"
                 }}>
                   <span>
                     <h5>{card.title}</h5>
@@ -111,7 +117,7 @@ function Dashboard() {
       </Container>
       <br />
       <Card className='border-0' style={{ backgroundColor: "#1E1E1E", borderRadius: "10px" }}>
-        <Card.Title style={{ display: "flex", margin: "10px", justifyContent: "space-between", backgroundColor: "#1E1E1E", borderRadius: "10px" }}>
+        <Card.Title style={{ display: "flex", marginLeft: "10px", marginTop: "10px", marginBottom: "-8px", justifyContent: "space-between", backgroundColor: "#1E1E1E", borderRadius: "10px" }}>
           <span >Latest Orders</span>
           <span><small onClick={() => {
             navigate("/labels")
@@ -120,7 +126,7 @@ function Dashboard() {
         <br />
         <Card.Body style={{ backgroundColor: "#1E1E1E", borderRadius: "10px" }}>
           <Table responsive="sm" className='table table-borderless'>
-            <thead style={{ borderRadius: "10px" }}>
+            <thead>
               <tr>
                 <th>Order Id</th>
                 <th>Tracking ID</th>
@@ -166,7 +172,7 @@ function Dashboard() {
                   }} style={{ color: "#426CFF", cursor: "pointer" }}>Show All →</small></span>
                 </Card.Title>
                 <Table responsive="sm" className='table table-borderless'>
-                  <thead>
+                  <thead style={{ color: "#656565" }}>
                     <tr>
                       <th>Amount</th>
                       <th>Method</th>
@@ -179,9 +185,9 @@ function Dashboard() {
                       recentDepositsData.map((el, index) => {
                         return (
                           <tr key={index}>
-                            <td>{el.amount}</td>
+                            <td style={{ color: "#FF7A49" }}>${el.amount}</td>
                             <td>{el.method}</td>
-                            <td>{el.dateAndTime}</td>
+                            <td style={{ color: "#656565" }}>{el.dateAndTime}</td>
                             <td><img src={el.status} alt="" /></td>
                           </tr>
                         )

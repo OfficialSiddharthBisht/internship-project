@@ -65,7 +65,7 @@ export default function MainLayout() {
       return (
         <div className="d-flex align-items-center p-2 rounded cp">
           <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
-            <img src={icon} alt="" style={{ marginRight: "5px" }} />
+            <img src={icon} alt="" style={{ marginRight: "10px", marginLeft: "15px" }} />
             {name}
             <hr style={{ color: "white", minWidth: "255px" }} />
           </p>
@@ -75,7 +75,7 @@ export default function MainLayout() {
     return (
       <div className="d-flex align-items-center p-2 rounded cp">
         <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
-          <img src={icon} alt="" style={{ marginRight: "5px" }} />
+          <img src={icon} alt="" style={{ marginRight: "10px", marginLeft: "15px" }} />
           {name}
         </p>
       </div>
@@ -138,15 +138,27 @@ export default function MainLayout() {
                           handleClose();
                         }}
                       >
-                        <div style={{ marginLeft: "0.4rem" }}>
+                        {/* <div style={{ marginLeft: "2.5rem" }}>
                           <img src={singleMenu.icon} alt="" />
                         </div>
                         <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
                           {singleMenu.name}
-                        </p>
+                        </p> */}
+                        {lineBreak(index === 0 || index === 3, singleMenu.name, singleMenu.icon)}
                       </div>
                     );
                   })}
+                  <Col>
+                    <Card style={{ margin: "0 15% 0 15%", backgroundColor: "#282828" }} className='border-0'>
+                      <Card.Body className="card-body" style={{ display: "flex", justifyContent: "space-between", borderRadius: "10px", marginBottom: "-25px" }}>
+                        <span><img src="./static/icons/dollar.png" alt="" /> Balance</span>
+                        <span>$100.00</span>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                  <img src="./static/icons/create.png" alt="" height={"230px"} width={"75%"} style={{ margin: "0 auto 0 auto", marginBottom: "50px", cursor: "pointer" }} onClick={() => {
+                    navigate("/newlabel");
+                  }} />
                 </ul>
               </div>
             </div>
@@ -168,7 +180,7 @@ export default function MainLayout() {
           <div style={{ display: "flex", flexDirection: "column", minWidth: "275px", minHeight: "100vh" }}>
             <div className="p-4">
               <a href="/">
-                <img src="./static/icons/theLogo.png" alt="" />
+                <img src="./static/icons/theLogo.png" alt="" height={"25px"} />
               </a>
               <hr />
               <div style={{ marginTop: "1rem" }}>
@@ -178,7 +190,7 @@ export default function MainLayout() {
                       key={index}
                       className={
                         selectedMenu.name == singleMenu.name
-                          ? "d-flex align-items-center rounded cp"
+                          ? "d-flex align-items-center bg-primary mb-3 rounded cp"
                           : "d-flex align-items-center menu rounded cp"
                       }
                       style={{ cursor: "pointer" }}
@@ -194,14 +206,14 @@ export default function MainLayout() {
               </div>
             </div>
             <Col>
-              <Card style={{ margin: "0 10% 0 10%", backgroundColor: "#282828" }} className='border-0'>
-                <Card.Body className="card-body" style={{ display: "flex", justifyContent: "space-between", borderRadius: "10px" }}>
+              <Card style={{ margin: "0 15% 0 15%", backgroundColor: "#282828" }} className='border-0'>
+                <Card.Body className="card-body" style={{ display: "flex", justifyContent: "space-between", borderRadius: "10px", marginBottom: "-25px" }}>
                   <span><img src="./static/icons/dollar.png" alt="" /> Balance</span>
                   <span>$100.00</span>
                 </Card.Body>
               </Card>
             </Col>
-            <img src="./static/icons/create.png" alt="" width={"85%"} style={{ margin: "0 auto 0 auto", cursor: "pointer" }} onClick={() => {
+            <img src="./static/icons/create.png" alt="" height={"230px"} width={"75%"} style={{ margin: "0 auto 0 auto", marginBottom: "50px", cursor: "pointer" }} onClick={() => {
               navigate("/newlabel");
             }} />
           </div>
