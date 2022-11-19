@@ -1,7 +1,80 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, Button, Card, Form, InputGroup, DropdownButton, Dropdown, Table } from 'react-bootstrap';
 import Header from '../layout/Header';
+
 function Deposit() {
+    const [creditOption, setCreditOption] = useState(true);
+    const [cryptoOption, setCryptoOption] = useState(false);
+    function ShowOne() {
+        if (creditOption) {
+            return (
+                <>
+                    <Form.Control className='border-0' aria-label="Card Number" placeHolder="Card Number" />
+                    <br />
+                    <Row>
+                        <Col>
+                            <InputGroup>
+                                <DropdownButton
+                                    variant="outline-secondary"
+                                    title="Month"
+                                    className='border-0'
+                                    id="input-group-dropdown-1"
+                                >
+                                    <Dropdown.Item>Jan</Dropdown.Item>
+                                    <Dropdown.Item>Feb</Dropdown.Item>
+                                    <Dropdown.Item>March</Dropdown.Item>
+                                    {/* <Dropdown.Divider /> */}
+                                    <Dropdown.Item>April</Dropdown.Item>
+                                    <Dropdown.Item>May</Dropdown.Item>
+                                    <Dropdown.Item>June</Dropdown.Item>
+                                    {/* <Dropdown.Divider /> */}
+                                    <Dropdown.Item>July</Dropdown.Item>
+                                    <Dropdown.Item>Aug</Dropdown.Item>
+                                    <Dropdown.Item>Sept</Dropdown.Item>
+                                    {/* <Dropdown.Divider /> */}
+                                    <Dropdown.Item>Oct</Dropdown.Item>
+                                    <Dropdown.Item>Nov</Dropdown.Item>
+                                    <Dropdown.Item>Dec</Dropdown.Item>
+
+                                    {/* <Dropdown.Item>Separated link</Dropdown.Item> */}
+                                </DropdownButton>
+                            </InputGroup>
+                        </Col>
+                        <Col>
+                            <InputGroup>
+                                <DropdownButton
+                                    variant="outline-secondary"
+                                    title="Year"
+                                    id="input-group-dropdown-1"
+                                    className='border-0'
+                                >
+                                    <Dropdown.Item>2022</Dropdown.Item>
+                                    <Dropdown.Item>2023</Dropdown.Item>
+                                    <Dropdown.Item>2024</Dropdown.Item>
+                                    <Dropdown.Item>2025</Dropdown.Item>
+                                    <Dropdown.Item>2026</Dropdown.Item>
+                                    <Dropdown.Item>2027</Dropdown.Item>
+                                    <Dropdown.Item>2028</Dropdown.Item>
+                                </DropdownButton>
+                            </InputGroup>
+                        </Col>
+                        <br /> <br /> <br />
+                        <Col>
+                            <Form.Control className='border-0' size="sm" placeholder='SVV Number' />
+                        </Col>
+                    </Row>
+                    <br />
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <img src="./static/icons/crypto-banner.png" alt="" width={"100%"} />
+                    <br /> <br />
+                </>
+            )
+        }
+    }
     const [depositHistoryData, setDepositHistoryData] = useState([
         {
             amount: "10000.00",
@@ -60,67 +133,29 @@ function Deposit() {
                                 <p>Choose Payment Method</p>
                                 <Row>
                                     <Col>
-                                        <img src="./static/icons/creditCard.png" alt="Credit Card" width={"230px"} />
+                                        <img src="./static/icons/creditCard.png"
+                                            alt="Credit Card"
+                                            width={"230px"}
+                                            onClick={() => {
+                                                setCreditOption(true);
+                                                setCryptoOption(false);
+                                            }}
+                                        />
                                     </Col>
                                     <Col>
-                                        <img src="./static/icons/crypto.png" alt="Cryptocurrency" width={"230px"} />
+                                        <img src="./static/icons/crypto.png"
+                                            alt="Cryptocurrency"
+                                            width={"230px"}
+                                            onClick={() => {
+                                                setCreditOption(false);
+                                                setCryptoOption(true);
+                                            }}
+                                        />
                                     </Col>
                                 </Row>
                                 <br />
-                                <Form.Control className='border-0' aria-label="Card Number" placeHolder="Card Number" />
-                                <br />
-                                <Row>
-                                    <Col>
-                                        <InputGroup>
-                                            <DropdownButton
-                                                variant="outline-secondary"
-                                                title="Month"
-                                                className='border-0'
-                                                id="input-group-dropdown-1"
-                                            >
-                                                <Dropdown.Item>Jan</Dropdown.Item>
-                                                <Dropdown.Item>Feb</Dropdown.Item>
-                                                <Dropdown.Item>March</Dropdown.Item>
-                                                {/* <Dropdown.Divider /> */}
-                                                <Dropdown.Item>April</Dropdown.Item>
-                                                <Dropdown.Item>May</Dropdown.Item>
-                                                <Dropdown.Item>June</Dropdown.Item>
-                                                {/* <Dropdown.Divider /> */}
-                                                <Dropdown.Item>July</Dropdown.Item>
-                                                <Dropdown.Item>Aug</Dropdown.Item>
-                                                <Dropdown.Item>Sept</Dropdown.Item>
-                                                {/* <Dropdown.Divider /> */}
-                                                <Dropdown.Item>Oct</Dropdown.Item>
-                                                <Dropdown.Item>Nov</Dropdown.Item>
-                                                <Dropdown.Item>Dec</Dropdown.Item>
-
-                                                {/* <Dropdown.Item>Separated link</Dropdown.Item> */}
-                                            </DropdownButton>
-                                        </InputGroup>
-                                    </Col>
-                                    <Col>
-                                        <InputGroup>
-                                            <DropdownButton
-                                                variant="outline-secondary"
-                                                title="Year"
-                                                id="input-group-dropdown-1"
-                                                className='border-0'
-                                            >
-                                                <Dropdown.Item>2022</Dropdown.Item>
-                                                <Dropdown.Item>2023</Dropdown.Item>
-                                                <Dropdown.Item>2024</Dropdown.Item>
-                                                <Dropdown.Item>2025</Dropdown.Item>
-                                                <Dropdown.Item>2026</Dropdown.Item>
-                                                <Dropdown.Item>2027</Dropdown.Item>
-                                                <Dropdown.Item>2028</Dropdown.Item>
-                                            </DropdownButton>
-                                        </InputGroup>
-                                    </Col>
-                                    <br /> <br /> <br />
-                                    <Col>
-                                        <Form.Control className='border-0' size="sm" placeholder='SVV Number' />
-                                    </Col>
-                                </Row>
+                                {/*  */}
+                                {ShowOne()}
                                 <Row>
                                     <Button variant="primary" style={{ color: " #FFFFFF" }}>Proceed</Button>{' '}
                                 </Row>
