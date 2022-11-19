@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate,useRoutes } from 'react-router-dom';
+import { Navigate, useRoutes } from 'react-router-dom';
 import AuthMainLayout from '../layout/AuthMainLayout';
 import MainLayout from '../layout/MainLayout';
 import Dashboard from '../pages/Dashboard';
@@ -12,6 +12,7 @@ import Page_404 from '../pages/common/Page_404';
 import Profile from '../pages/Profile';
 import Labels from '../pages/Labels';
 import NewLabel from '../pages/NewLabel';
+import LabelCreated from '../pages/LabelCreated';
 
 function Router() {
     return useRoutes([
@@ -24,8 +25,8 @@ function Router() {
                     element: <Dashboard />,
                 },
                 {
-                    path : "/deposits",
-                    element: <Deposit/>
+                    path: "/deposits",
+                    element: <Deposit />
                 },
                 {
                     path: "/support",
@@ -46,6 +47,10 @@ function Router() {
                 {
                     path: "/newLabel",
                     element: <NewLabel />
+                },
+                {
+                    path: "/labelcreated",
+                    element: <LabelCreated />
                 }
             ]
         },
@@ -63,7 +68,7 @@ function Router() {
                 },
             ]
         },
-        {path : "/404", element: <Page_404 />},
+        { path: "/404", element: <Page_404 /> },
         { path: "*", element: <Navigate to="/404" replace /> }
     ])
 };
