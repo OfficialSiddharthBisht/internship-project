@@ -85,7 +85,6 @@ function Dashboard() {
   ]);
   return (
     <>
-      <Header />
       <Container>
         <h5>Overview</h5>
         <Row>

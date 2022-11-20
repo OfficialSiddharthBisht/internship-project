@@ -1,10 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Form from 'react-bootstrap/Form';
 import LogoutPopup from './LogoutPopup';
-// import { Modal, ModalHeader, ModalBody } from 'reactstrap';
-// import ConfirmLogout from '../components/ConfirmLogout';
 function Header() {
     const [modalShow, setModalShow] = useState(false);
+    const [isMobile, setisMobile] = useState(false);
+    const closeMobileMenuRef = useRef();
+    useEffect(() => {
+        window.addEventListener(
+            "resize",
+            () => {
+                setisMobile(window.innerWidth < 1200);
+            },
+            false
+        );
+    }, []);
+
+    useEffect(() => {
+        setisMobile(window.innerWidth < 1200);
+    });
     return (
         <>
             <div style={{ display: "flex", marginTop: "0px", width: "100%", margin: "auto", marginTop: "-34px" }}>

@@ -27,7 +27,6 @@ function NewLabel() {
     ])
     return (
         <>
-            <Header />
             <Container>
                 <Row style={{ display: "flex", justifyContent: "space-between" }}>
                     <Col >
