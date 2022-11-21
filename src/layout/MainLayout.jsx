@@ -28,36 +28,43 @@ export default function MainLayout() {
       name: "New Label",
       link: "/newLabel",
       icon: "./static/icons/newLable.png",
+      activeIcon: "./static/active/newLabel.png"
     },
     {
       name: "Dashboard",
       link: "/",
       icon: "./static/icons/dashboardIcon.png",
+      activeIcon: "./static/active/dashboardIcon.png"
     },
     {
       name: "My Labels",
       link: "/labels",
       icon: "./static/icons/label.png",
+      activeIcon: "./static/active/label.png"
     },
     {
       name: "Deposit",
       link: "/deposits",
-      icon: "./static/icons/deposit.png"
+      icon: "./static/icons/deposit.png",
+      activeIcon: "./static/active/deposit.png"
     },
     {
       name: "Profile",
       link: "/profile",
       icon: "./static/icons/profile.png",
+      activeIcon: "./static/active/profile.png"
     },
     {
       name: "Support",
       link: "/support",
       icon: "./static/icons/support.png",
+      activeIcon: "./static/active/support.png"
     },
     {
       name: "FAQ",
       link: "/faq",
       icon: "./static/icons/faq.png",
+      activeIcon: "./static/active/faq.png"
     },
   ]);
   function lineBreak(x, name, icon) {
@@ -78,6 +85,22 @@ export default function MainLayout() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const whichIcon = (selectedMenuIcon, singleMenuIcon) => {
+    if (selectedMenuIcon.name !== singleMenuIcon.name) {
+      return (
+        <div style={{ marginLeft: "2.5rem" }}>
+          <img src={singleMenuIcon.icon} alt="" />
+        </div>
+      )
+    } else {
+      return (
+        <div style={{ marginLeft: "2.5rem" }}>
+          <img src={singleMenuIcon.activeIcon} alt="" />
+        </div>
+      )
+    }
+  }
   const mobileMenu = () => {
     return (
       <>
@@ -145,7 +168,7 @@ export default function MainLayout() {
                           className={
                             selectedMenu.name == singleMenu.name
                               ? "d-flex align-items-center text-primary text-large p-0 rounded mb-0 cp"
-                              : "d-flex align-items-center menu p-0 rounded mb-0 cp"
+                              : "d-flex align-items-center menu p-0 text-large rounded mb-0 cp"
                           }
                           style={{
                             fontSize: "large"
@@ -219,8 +242,8 @@ export default function MainLayout() {
                       <div
                         className={
                           selectedMenu.name == singleMenu.name
-                            ? "d-flex align-items-center text-primary mb-3 rounded cp"
-                            : "d-flex align-items-center menu rounded cp"
+                            ? "d-flex align-items-center text-white text-bold mb-3 rounded cp"
+                            : "d-flex align-items-center menu text-bold rounded cp"
                         }
                         style={{ cursor: "pointer" }}
                         onClick={() => {
@@ -228,9 +251,11 @@ export default function MainLayout() {
                           navigate(singleMenu.link);
                         }}
                       >
-                        <div style={{ marginLeft: "2.5rem" }}>
-                          <img src={singleMenu.icon} alt="" />
-                        </div>
+                        {/* <div style={{ marginLeft: "2.5rem" }}> */}
+                        {/* <img src={singleMenu.icon} alt="" /> */}
+                        {/* </div> */}
+
+                        {whichIcon(selectedMenu, singleMenu)}
                         <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
                           {singleMenu.name}
                         </p>

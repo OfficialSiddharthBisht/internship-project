@@ -141,7 +141,7 @@ function NewLabel() {
                 </Row>
                 <br />
                 <Row>
-                    <Button variant="dark" style={{ border: "1px dashed #E65425", color: "#E65425" }} onClick={() => { navigate("/labelcreated") }}>+ Create New Label</Button>{' '}
+                    <Button variant="dark" style={{ border: "2px dashed #E65425", color: "#E65425" }} onClick={() => { navigate("/labelcreated") }}>+ Create New Label</Button>{' '}
                 </Row>
             </Container>
         </>
