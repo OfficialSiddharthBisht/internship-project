@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Card, Col } from "react-bootstrap";
 import { Outlet, useNavigate } from "react-router-dom";
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Header from './Header';
-
+import Header from "./Header";
+import LogoutPopup from './LogoutPopup'
 export default function MainLayout() {
   const navigate = useNavigate();
   const [isMobile, setisMobile] = useState(false);
@@ -22,7 +22,7 @@ export default function MainLayout() {
   useEffect(() => {
     setisMobile(window.innerWidth < 1200);
   });
-
+  const [modalShow, setModalShow] = useState(false);
   const [menus, setmenus] = useState([
     {
       name: "New Label",
@@ -90,10 +90,16 @@ export default function MainLayout() {
                 navigate("/");
               }}
             >
-              <img src="./static/icons/theLogo.png" alt="Logo" className="img-fluid" style={{ maxWidth: "15rem" }} />
+              <img src="./static/icons/logomobile.png" alt="Logo" className="img-fluid" style={{ maxWidth: "15rem" }} />
             </a>
           </div>
-
+          <img src="./static/icons/notifybtn.png" alt="" height={"40px"} style={{ margin: "0px 5px 0px 5px" }} />
+          <img src="./static/icons/logout.png" alt="" height={"40px"}
+            style={{ margin: "0px 5px 0px 5px" }}
+            onClick={() => {
+              setModalShow(true);
+            }}
+          />
           <button
             className="btn navbar-toggler"
             type="button"
@@ -102,10 +108,14 @@ export default function MainLayout() {
             <img src="./static/icons/menu.png" alt="=" className="img-fluid" style={{ maxWidth: "2rem" }} />
           </button>
         </div>
+        <LogoutPopup
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
         <Offcanvas show={show} onHide={handleClose} className='bg-black'>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>
-              <img closeButton src="./static/icons/theLogo.png" alt="logo" onClick={() => {
+              <img closeButton src="./static/icons/logomobile.png" alt="logo" onClick={() => {
                 navigate("/");
                 handleClose();
               }} />
@@ -113,6 +123,7 @@ export default function MainLayout() {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <div className="pt-0 pe-4 bg-black">
+              <hr />
               <div className="mobile-menu">
                 <ul className="navbar-nav">
                   {menus.map((singleMenu, index) => {
@@ -121,8 +132,8 @@ export default function MainLayout() {
                         <div
                           className={
                             selectedMenu.name == singleMenu.name
-                              ? "d-flex align-items-center text-primary p-2 rounded mb-2 cp"
-                              : "d-flex align-items-center menu p-2 rounded mb-2 cp"
+                              ? "d-flex align-items-center text-primary p-0 rounded mb-0 cp"
+                              : "d-flex align-items-center menu p-0 rounded mb-0 cp"
                           }
                           onClick={() => {
                             setselectedMenu(singleMenu);
@@ -142,16 +153,26 @@ export default function MainLayout() {
                     );
                   })}
                   <Col>
-                    <Card style={{ margin: "0 15% 0 15%", backgroundColor: "#282828" }} className='border-0'>
+                    <Card style={{ margin: "0 10% 0 10%", backgroundColor: "#282828" }} className='border-0'>
                       <Card.Body className="card-body" style={{ display: "flex", justifyContent: "space-between", borderRadius: "10px", marginBottom: "-25px" }}>
                         <span><img src="./static/icons/dollar.png" alt="" /> Balance</span>
                         <span>$100.00</span>
                       </Card.Body>
                     </Card>
                   </Col>
-                  <img src="./static/icons/create.png" alt="" height={"230px"} width={"75%"} style={{ margin: "0 auto 0 auto", marginBottom: "50px", cursor: "pointer" }} onClick={() => {
-                    navigate("/newlabel");
-                  }} />
+                  <Col>
+                    <Card style={{ margin: "15% 10% 0 10%", backgroundColor: "#282828" }} className='border-0'>
+                      <Card.Body className="card-body" style={{ display: "flex", justifyContent: "space-between", borderRadius: "10px" }}>
+                        <span><img src="./static/icons/createMob.png"
+                          alt=""
+                          width={"30px"}
+                          onClick={() => {
+                            navigate("/newlabel");
+                          }}
+                        /> Create New Label</span>
+                      </Card.Body>
+                    </Card>
+                  </Col>
                 </ul>
               </div>
             </div>
@@ -213,7 +234,7 @@ export default function MainLayout() {
                 </Card.Body>
               </Card>
             </Col>
-            <img src="./static/icons/create.png" alt="" height={"230px"} width={"75%"} style={{ margin: "0 auto 0 auto", marginBottom: "50px", cursor: "pointer" }} onClick={() => {
+            <img src="./static/icons/create.png" alt="" height={"240px"} width={"75%"} style={{ margin: "0 auto 0 auto", marginBottom: "50px", cursor: "pointer" }} onClick={() => {
               navigate("/newlabel");
             }} />
           </div>

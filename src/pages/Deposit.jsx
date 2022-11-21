@@ -118,7 +118,6 @@ function Deposit() {
     ])
     return (
         <>
-            <Header />
             <h2>Deposits</h2>
             <Container>
                 <Row>
