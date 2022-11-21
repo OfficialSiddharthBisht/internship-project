@@ -194,10 +194,11 @@ function Deposit() {
                                             }
                                         </tbody>
                                         <tfoot>
-                                            <Box py={2} display="flex" justifyContent="flex-end">
+                                            <Box py={2} display="flex" justifyContent="flex-end" marginRight="-100%">
                                                 <Pagination
+                                                    backgroundColor="white"
                                                     count={2}
-                                                    color="primary"
+                                                    color="black"
                                                     size='large'
                                                     variant="text"
                                                     onChange={(e, value) => setPage(value)}

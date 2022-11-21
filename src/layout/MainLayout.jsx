@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Card, Col } from "react-bootstrap";
 import { Outlet, useNavigate } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Header from "./Header";
-
+import Header from "./Header"
 export default function MainLayout() {
   const navigate = useNavigate();
   const [isMobile, setisMobile] = useState(false);
