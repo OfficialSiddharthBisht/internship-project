@@ -115,10 +115,22 @@ export default function MainLayout() {
         <Offcanvas show={show} onHide={handleClose} className='bg-black'>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>
-              <img closeButton src="./static/icons/logomobile.png" alt="logo" onClick={() => {
-                navigate("/");
-                handleClose();
-              }} />
+              <span className="d-flex flex-fill">
+                <img closeButton src="./static/icons/logomobile.png" alt="logo" onClick={() => {
+                  navigate("/");
+                  handleClose();
+                }} />
+                <span style={{ minWidth: "160px" }}></span>
+                <span>
+                  <img src="./static/icons/notifybtn.png" alt="" height={"40px"} style={{ margin: "0px 5px 0px 5px" }} />
+                  <img src="./static/icons/logout.png" alt="" height={"40px"}
+                    style={{ margin: "0px 5px 0px 5px" }}
+                    onClick={() => {
+                      setModalShow(true);
+                    }}
+                  />
+                </span>
+              </span>
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
@@ -132,9 +144,12 @@ export default function MainLayout() {
                         <div
                           className={
                             selectedMenu.name == singleMenu.name
-                              ? "d-flex align-items-center text-primary p-0 rounded mb-0 cp"
+                              ? "d-flex align-items-center text-primary text-large p-0 rounded mb-0 cp"
                               : "d-flex align-items-center menu p-0 rounded mb-0 cp"
                           }
+                          style={{
+                            fontSize: "large"
+                          }}
                           onClick={() => {
                             setselectedMenu(singleMenu);
                             navigate(singleMenu.link);
