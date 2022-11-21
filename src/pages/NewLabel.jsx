@@ -35,7 +35,9 @@ function NewLabel() {
                     <Col>
                     </Col>
                     <Col className='d-sm-none d-md-block'>
-                        <p style={{ maxHeight: "85px", overflow: "hidden" }}>Be careful when filling in the fields.</p>
+                        <p style={{ maxHeight: "85px", overflow: "hidden", fontSize: "small" }}>
+                            Be careful when filling in the fields and make sure that you have enough money in your account
+                        </p>
                     </Col>
                 </Row>
                 <br />
@@ -43,13 +45,13 @@ function NewLabel() {
                     <Col>
                         <Card className='border-0'>
                             <Card.Body className='card-body' style={{ minWidth: "300px", borderRadius: "10px" }}>
-                                <Card.Title>① Sender</Card.Title>
+                                <Card.Title><span style={{ color: "#FF7A49", fontSize: "23px" }}>①</span> Sender</Card.Title>
                                 <Card.Text>
                                     {
                                         senderReceiverInfo.map((el, index) => {
                                             return (
                                                 <Col key={index}>
-                                                    <InputGroup size="sm" className="mb-3">
+                                                    <InputGroup size="lg" className="mb-3">
                                                         <Form.Control aria-label="Small"
                                                             className='border-0'
                                                             aria-describedby="inputGroup-sizing-sm"
@@ -66,13 +68,13 @@ function NewLabel() {
                     <Col>
                         <Card className='border-0'>
                             <Card.Body className='card-body' style={{ minWidth: "300px", borderRadius: "10px" }}>
-                                <Card.Title>② Recipient</Card.Title>
+                                <Card.Title><span style={{ color: "#FF7A49", fontSize: "23px" }}> ② </span>Recipient</Card.Title>
                                 <Card.Text>
                                     {
                                         senderReceiverInfo.map((el, index) => {
                                             return (
                                                 <Col key={index}>
-                                                    <InputGroup size="sm" className="mb-3">
+                                                    <InputGroup size="lg" className="mb-3">
                                                         <Form.Control aria-label="Small"
                                                             aria-describedby="inputGroup-sizing-sm"
                                                             className='border-0'
@@ -89,7 +91,7 @@ function NewLabel() {
                     <Col>
                         <Card className='border-0'>
                             <Card.Body className='card-body' style={{ minWidth: "300px", borderRadius: "10px" }}>
-                                <Card.Title>③General Data</Card.Title>
+                                <Card.Title> <span style={{ color: "#FF7A49", fontSize: "23px" }}> ③ </span>General Data</Card.Title>
                                 <Card.Text>
                                     <Col>
                                         <Form.Select className='border-0' aria-label="Default select example">
@@ -114,7 +116,7 @@ function NewLabel() {
                                             return (
                                                 <Col key={index}>
                                                     <Form.Label htmlFor="basic-url">{el.metric}</Form.Label>
-                                                    <InputGroup size="sm" className="mb-3">
+                                                    <InputGroup size="lg" className="mb-3">
                                                         <Form.Control aria-label="Small"
                                                             aria-describedby="inputGroup-sizing-sm"
                                                             className='border-0'
