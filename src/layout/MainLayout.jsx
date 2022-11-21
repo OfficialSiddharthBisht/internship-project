@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Card, Col } from "react-bootstrap";
 import { Outlet, useNavigate } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Header from "./Header";
 import LogoutPopup from './LogoutPopup'
