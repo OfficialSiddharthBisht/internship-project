@@ -18,7 +18,6 @@ function Labels() {
     let [labelData, setLabelData] = useState([1, 2, 3, 4, 5])
     return (
         <>
-            <Header />
             <h2>Labels History</h2>
             <Card className='border-0'>
                 <Card.Body className='card-body' style={{ borderRadius: "10px" }}>

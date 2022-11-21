@@ -16,7 +16,6 @@ function FAQ() {
     ]
     return (
         <>
-            <Header />
             <Row style={{ display: "flex", justifyContent: "space-between" }}>
                 <Col md={5}>
                     <h2>Frequently Asked Questions</h2>

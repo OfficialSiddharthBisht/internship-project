@@ -30,7 +30,6 @@ function Profile() {
     ])
     return (
         <>
-            <Header />
             <Container>
                 <Row>
                     <Col>

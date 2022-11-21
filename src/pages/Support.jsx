@@ -98,7 +98,6 @@ function Support() {
     }
     return (
         <>
-            <Header />
             <Container>
                 <Row>
                     <Col>

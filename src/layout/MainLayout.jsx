@@ -3,6 +3,7 @@ import { Card, Col } from "react-bootstrap";
 import { Outlet, useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Header from "./Header";
 
 export default function MainLayout() {
   const navigate = useNavigate();
@@ -90,7 +91,7 @@ export default function MainLayout() {
                 navigate("/");
               }}
             >
-              <img src="./static/icons/theLogo.png" alt="Logo" className="img-fluid" style={{ maxWidth: "15rem" }} />
+              <img src="./static/icons/logomobile.png" alt="Logo" className="img-fluid" style={{ maxWidth: "15rem" }} />
             </a>
           </div>
 
@@ -220,6 +221,7 @@ export default function MainLayout() {
         </nav>
 
         <section className={isMobile ? "p-3" : "home flex-fill p-5"} style={{ marginLeft: isMobile ? "0px" : "275px", maxWidth: "100%" }}>
+          <Header />
           <Outlet />
         </section>
       </div>
