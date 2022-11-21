@@ -4,7 +4,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Header from "./Header";
-
+import LogoutPopup from './LogoutPopup'
 export default function MainLayout() {
   const navigate = useNavigate();
   const [isMobile, setisMobile] = useState(false);
@@ -23,7 +23,7 @@ export default function MainLayout() {
   useEffect(() => {
     setisMobile(window.innerWidth < 1200);
   });
-
+  const [modalShow, setModalShow] = useState(false);
   const [menus, setmenus] = useState([
     {
       name: "New Label",
@@ -94,7 +94,13 @@ export default function MainLayout() {
               <img src="./static/icons/logomobile.png" alt="Logo" className="img-fluid" style={{ maxWidth: "15rem" }} />
             </a>
           </div>
-
+          <img src="./static/icons/notifybtn.png" alt="" height={"40px"} style={{ margin: "0px 5px 0px 5px" }} />
+          <img src="./static/icons/logout.png" alt="" height={"40px"}
+            style={{ margin: "0px 5px 0px 5px" }}
+            onClick={() => {
+              setModalShow(true);
+            }}
+          />
           <button
             className="btn navbar-toggler"
             type="button"
@@ -103,6 +109,10 @@ export default function MainLayout() {
             <img src="./static/icons/menu.png" alt="=" className="img-fluid" style={{ maxWidth: "2rem" }} />
           </button>
         </div>
+        <LogoutPopup
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
         <Offcanvas show={show} onHide={handleClose} className='bg-black'>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>
