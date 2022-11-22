@@ -248,8 +248,8 @@ export default function MainLayout() {
         </div>
 
         <nav className="d-none d-lg-block" style={{ position: "fixed" }}>
-          <div style={{ display: "flex", flexDirection: "column", minWidth: "275px", minHeight: "100vh" }}>
-            <div className="p-4">
+          <div style={{ display: "flex", flexDirection: "column", minWidth: "275px", maxHeight: "100vh" }}>
+            <div className="p-2">
               <a href="/">
                 <img src="./static/icons/theLogo.png" alt="" height={"25px"} />
               </a>
