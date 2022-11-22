@@ -51,7 +51,7 @@ function NewLabel() {
                                         senderReceiverInfo.map((el, index) => {
                                             return (
                                                 <Col key={index}>
-                                                    <InputGroup size="lg" className="mb-3">
+                                                    <InputGroup size="m" className="mb-3">
                                                         <Form.Control aria-label="Small"
                                                             className='border-0'
                                                             aria-describedby="inputGroup-sizing-sm"
@@ -74,7 +74,7 @@ function NewLabel() {
                                         senderReceiverInfo.map((el, index) => {
                                             return (
                                                 <Col key={index}>
-                                                    <InputGroup size="lg" className="mb-3">
+                                                    <InputGroup size="m" className="mb-3">
                                                         <Form.Control aria-label="Small"
                                                             aria-describedby="inputGroup-sizing-sm"
                                                             className='border-0'
@@ -116,7 +116,7 @@ function NewLabel() {
                                             return (
                                                 <Col key={index}>
                                                     <Form.Label htmlFor="basic-url">{el.metric}</Form.Label>
-                                                    <InputGroup size="lg" className="mb-3">
+                                                    <InputGroup size="m" className="mb-3">
                                                         <Form.Control aria-label="Small"
                                                             aria-describedby="inputGroup-sizing-sm"
                                                             className='border-0'

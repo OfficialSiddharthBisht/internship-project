@@ -87,6 +87,23 @@ export default function MainLayout() {
   const handleShow = () => setShow(true);
 
   const whichIcon = (selectedMenuIcon, singleMenuIcon) => {
+    if (singleMenuIcon.name === "New Label") {
+      return (
+        <span
+          style={{
+            marginLeft: "2.5rem",
+            backgroundColor: "#F99A4D",
+            padding: "5px",
+            borderRadius: "10px",
+            width: "100%",
+            margin: "auto",
+            textAlign: "center",
+            color: "white"
+          }}>
+          {singleMenuIcon.name}
+        </span>
+      )
+    }
     if (selectedMenuIcon.name !== singleMenuIcon.name) {
       return (
         <div style={{ marginLeft: "2.5rem" }}>
@@ -167,7 +184,7 @@ export default function MainLayout() {
                         <div
                           className={
                             selectedMenu.name == singleMenu.name
-                              ? "d-flex align-items-center text-primary text-large p-0 rounded mb-0 cp"
+                              ? "d-flex align-items-center text-white text-large p-0 rounded mb-0 cp"
                               : "d-flex align-items-center menu p-0 text-large rounded mb-0 cp"
                           }
                           style={{
@@ -179,11 +196,9 @@ export default function MainLayout() {
                             handleClose();
                           }}
                         >
-                          <div style={{ marginLeft: "2.5rem" }}>
-                            <img src={singleMenu.icon} alt="" />
-                          </div>
+                          {whichIcon(selectedMenu, singleMenu)}
                           <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
-                            {singleMenu.name}
+                            {index !== 0 ? singleMenu.name : ""}
                           </p>
                         </div>
                         {lineBreak(index === 0 || index === 3, singleMenu.name, singleMenu.icon)}
@@ -242,7 +257,7 @@ export default function MainLayout() {
                       <div
                         className={
                           selectedMenu.name == singleMenu.name
-                            ? "d-flex align-items-center text-white text-bold mb-3 rounded cp"
+                            ? "d-flex align-items-center text-white text-bold rounded cp"
                             : "d-flex align-items-center menu text-bold rounded cp"
                         }
                         style={{ cursor: "pointer" }}
@@ -257,7 +272,7 @@ export default function MainLayout() {
 
                         {whichIcon(selectedMenu, singleMenu)}
                         <p className="mb-0" style={{ marginLeft: "0.5rem" }}>
-                          {singleMenu.name}
+                          {index !== 0 ? singleMenu.name : ""}
                         </p>
                       </div>
                       {lineBreak(index === 0 || index === 3, singleMenu.name, singleMenu.icon)}
