@@ -1,44 +1,44 @@
-h1{
+h1 {
     font-size: 56;
 }
-h2{
+h2 {
     font-size: 40;
 }
-h3{
+h3 {
     font-size: 32;
     font-weight: bold;
 }
-h4{
+h4 {
     font-size: 28;
 }
-h5{
+h5 {
     font-size: 24;
     font-weight: bold;
 }
-.sideNavDark{
-    background-color:  #181818;
-    color: #FFFFFF;
-    font-family: 'Inter';
+.sideNavDark {
+    background-color: #181818;
+    color: #ffffff;
+    font-family: "Inter";
     font-size: 16px;
 }
-.card-body{
-    background-color: #3A3A3A;
+.card-body {
+    background-color: #3a3a3a;
     border: 20px;
 }
 
-.accordion-item *{
-    color: #ABABAB;
-    background-color: #1E1E1E;
+.accordion-item * {
+    color: #ababab;
+    background-color: #1e1e1e;
 }
-thead{
+thead {
     background-color: #282828;
     border-radius: 10px;
     border: none;
     color: "#656565";
 }
-td{
+td {
     border: none;
 }
-.customClass{
+.customClass {
     background-color: red;
 }

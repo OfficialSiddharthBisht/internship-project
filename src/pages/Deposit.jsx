@@ -7,13 +7,14 @@ function ShowOne(creditOption) {
     if (creditOption) {
         return (
             <>
-                <Form.Control className='border-0' aria-label="Card Number" placeHolder="Card Number" />
+                <Form.Control className='border-0' size='lg' aria-label="Card Number" placeHolder="Card Number" />
                 <br />
                 <Row>
                     <Col>
                         <InputGroup>
                             <DropdownButton
-                                variant="outline-secondary"
+                                size='lg'
+                                variant="outline-dark"
                                 title="Month"
                                 className='border-0'
                                 id="input-group-dropdown-1"
@@ -41,7 +42,8 @@ function ShowOne(creditOption) {
                     <Col>
                         <InputGroup>
                             <DropdownButton
-                                variant="outline-secondary"
+                                size='lg'
+                                variant="outline-dark"
                                 title="Year"
                                 id="input-group-dropdown-1"
                                 className='border-0'
@@ -58,7 +60,7 @@ function ShowOne(creditOption) {
                     </Col>
                     <br /> <br /> <br />
                     <Col>
-                        <Form.Control className='border-0' size="sm" placeholder='SVV Number' />
+                        <Form.Control className='border-0' size="lg" placeholder='SVV Number' />
                     </Col>
                 </Row>
                 <br />
@@ -78,6 +80,8 @@ function Deposit() {
     const [page, setPage] = useState(1);
     const [creditOption, setCreditOption] = useState(true);
     const [cryptoOption, setCryptoOption] = useState(false);
+    const [isCreditActive, setIsCreditActive] = useState(false);
+    const [isCryptoActive, setIsCryptoActive] = useState(false);
     const [depositHistoryData, setDepositHistoryData] = useState([
         {
             amount: "10000.00",
@@ -136,11 +140,18 @@ function Deposit() {
                                 <Row>
                                     <Col>
                                         <img src="./static/icons/creditCard.png"
+                                            id='deposit-options'
+                                            style={{
+                                                border: isCreditActive ? "3px solid #F99A4D" : "",
+                                                borderRadius: "15px"
+                                            }}
                                             alt="Credit Card"
                                             width={"230px"}
                                             onClick={() => {
                                                 setCreditOption(true);
                                                 setCryptoOption(false);
+                                                setIsCreditActive(current => true)
+                                                setIsCryptoActive(current => false)
                                             }}
                                         />
                                     </Col>
@@ -148,9 +159,15 @@ function Deposit() {
                                         <img src="./static/icons/crypto.png"
                                             alt="Cryptocurrency"
                                             width={"230px"}
+                                            style={{
+                                                border: isCryptoActive ? "3px solid #F99A4D" : "",
+                                                borderRadius: "15px"
+                                            }}
                                             onClick={() => {
                                                 setCreditOption(false);
                                                 setCryptoOption(true);
+                                                setIsCreditActive(current => false)
+                                                setIsCryptoActive(current => true)
                                             }}
                                         />
                                     </Col>
