@@ -76,12 +76,12 @@ function Dashboard() {
       dateAndTime: "01/06/2022",
       status: "./static/icons/depositTrue.png",
     },
-    {
-      amount: "120.00",
-      method: "Credit Card",
-      dateAndTime: "01/06/2022",
-      status: "./static/icons/depositTrue.png",
-    }
+    // {
+    //   amount: "120.00",
+    //   method: "Credit Card",
+    //   dateAndTime: "01/06/2022",
+    //   status: "./static/icons/depositTrue.png",
+    // }
   ]);
   return (
     <>
