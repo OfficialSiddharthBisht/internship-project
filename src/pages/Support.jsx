@@ -63,7 +63,7 @@ function Support() {
                 <td>{el.ticket}</td>
                 <td>{el.msg} <br /> <small>{el.dateAndTime}</small></td>
                 <td> Status <br /> <span>{el.status} </span></td>
-                <td style={{ color: "#426CFF" }}>Open →</td>
+                <td style={{ color: "#426CFF", cursor: "pointer" }}>Open →</td>
             </tr>
         )
         if (el.status === 'Active') {
@@ -72,7 +72,7 @@ function Support() {
                     <td>{el.ticket}</td>
                     <td>{el.msg} <br /> <small>{el.dateAndTime}</small></td>
                     <td>{el.status}</td>
-                    <td style={{ color: "#426CFF" }}>Open →</td>
+                    <td style={{ color: "#426CFF", cursor: "pointer" }}>Open →</td>
                 </tr>
             )
         }
@@ -110,7 +110,7 @@ function Support() {
                                     <Form.Label>Category</Form.Label>
                                     <InputGroup>
                                         <DropdownButton
-                                            variant="outline-secondary"
+                                            variant="outline-dark"
                                             title="Category"
                                             id="input-group-dropdown-1"
                                         >

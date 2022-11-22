@@ -80,7 +80,7 @@ function Deposit() {
     const [page, setPage] = useState(1);
     const [creditOption, setCreditOption] = useState(true);
     const [cryptoOption, setCryptoOption] = useState(false);
-    const [isCreditActive, setIsCreditActive] = useState(false);
+    const [isCreditActive, setIsCreditActive] = useState(true);
     const [isCryptoActive, setIsCryptoActive] = useState(false);
     const [depositHistoryData, setDepositHistoryData] = useState([
         {
@@ -127,10 +127,10 @@ function Deposit() {
                 <Row>
                     <Col>
                         <Card className='border-0'>
-                            <Card.Body className='card-body' style={{ borderRadius: "10px" }}>
-                                <Card.Header style={{ backgroundColor: "#404040", color: "#FFFFFF", margin: "0px" }}>
-                                    <h4 >Topup Account</h4>
-                                </Card.Header>
+                            <Card.Body className='card-body' style={{ borderRadius: "10px", overflow: "hidden" }}>
+                                {/* <Card.Header style={{ backgroundColor: "#404040", color: "#FFFFFF", borderRadius: "none" }}> */}
+                                <h4 style={{ backgroundColor: "#404040", color: "#FFFFFF", borderRadius: "none", padding: "10px", margin: "-10px" }}>Topup Account</h4>
+                                {/* </Card.Header> */}
                                 <br />
                                 <InputGroup size="lg">
                                     <Form.Control className='border-0' />
@@ -183,11 +183,13 @@ function Deposit() {
 
                     </Col>
                     <Col>
-                        <h5>Deposit History</h5>
                         <Container>
                             <Card className='border-0'>
-                                <Card.Body className='card-body' style={{ borderRadius: "10px" }}>
-                                    <Table responsive="sm" className='table table-borderless '>
+                                <Card.Header style={{ backgroundColor: "#3a3a3a" }}>
+                                    <h5 style={{ backgroundColor: "#3a3a3a", color: "#FFFFFF", borderRadius: "none", padding: "10px" }}>Deposit History</h5>
+                                </Card.Header>
+                                <Card.Body className='card-body'>
+                                    <Table responsive="sm" className='table table-borderless ' style={{ fontSize: "1.2rem" }}>
                                         <thead>
                                             <tr>
                                                 <th>Amout</th>

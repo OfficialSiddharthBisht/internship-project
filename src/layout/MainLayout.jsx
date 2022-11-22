@@ -130,12 +130,13 @@ export default function MainLayout() {
                 navigate("/");
               }}
             >
-              <img src="./static/icons/logomobile.png" alt="Logo" className="img-fluid" style={{ maxWidth: "15rem" }} />
+              <img src="./static/icons/logomobile.png" alt="Logo" className="img-fluid" style={{ maxWidth: "12rem" }} />
             </a>
           </div>
-          <img src="./static/icons/notifybtn.png" alt="" height={"40px"} style={{ margin: "0px 5px 0px 5px" }} />
+          <img src="./static/icons/search.png" alt="" />
+          <img src="./static/icons/notifybtn.png" alt="" height={"40px"} style={{ margin: "0px 4px 0px 4px" }} />
           <img src="./static/icons/logout.png" alt="" height={"40px"}
-            style={{ margin: "0px 5px 0px 5px" }}
+            style={{ margin: "0px 4px 0px 4px" }}
             onClick={() => {
               setModalShow(true);
             }}
@@ -160,8 +161,9 @@ export default function MainLayout() {
                   navigate("/");
                   handleClose();
                 }} />
-                <span style={{ minWidth: "160px" }}></span>
+                <span style={{ minWidth: "100px" }}></span>
                 <span>
+                  <img src="./static/icons/search.png" alt="" />
                   <img src="./static/icons/notifybtn.png" alt="" height={"40px"} style={{ margin: "0px 5px 0px 5px" }} />
                   <img src="./static/icons/logout.png" alt="" height={"40px"}
                     style={{ margin: "0px 5px 0px 5px" }}
