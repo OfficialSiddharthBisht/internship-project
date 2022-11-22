@@ -22,7 +22,7 @@ function Header() {
         <>
             <div
                 className={isMobile ? "d-none" : "d-flex mb-3 navbar-search"}
-                style={{ marginTop: "0px", width: "100%", margin: "auto", marginTop: "-35px" }}>
+                style={{ marginTop: "0px", width: "100%", margin: "auto", marginTop: "-45px" }}>
                 <Form.Group size="sm" style={{ minWidth: "90%" }}>
                     <Form.Control type="text" className='border-1' placeholder="🔍 Search by ID, To Name, From Name.." />
                 </Form.Group>

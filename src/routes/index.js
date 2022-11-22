@@ -58,14 +58,14 @@ function Router() {
             path: "",
             element: <AuthMainLayout />,
             children: [
-                {
-                    path: "signup",
-                    element: <Signup />,
-                },
-                {
-                    path: "login",
-                    element: <Login />
-                },
+                // {
+                //     path: "signup",
+                //     element: <Signup />,
+                // },
+                // {
+                //     path: "login",
+                //     element: <Login />
+                // },
             ]
         },
         { path: "/404", element: <Page_404 /> },
