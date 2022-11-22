@@ -97,9 +97,11 @@ export default function MainLayout() {
             borderRadius: "10px",
             width: "100%",
             margin: "auto",
-            textAlign: "center",
+            marginLeft: "30px",
             color: "white"
           }}>
+          <img src={singleMenuIcon.icon} alt="" />
+          <span> </span>
           {singleMenuIcon.name}
         </span>
       )
@@ -163,7 +165,7 @@ export default function MainLayout() {
                 }} />
                 <span style={{ minWidth: "100px" }}></span>
                 <span>
-                  <img src="./static/icons/search.png" alt="" />
+                  <img src="./static/icons/search.png" alt="" style={{ marginLeft: "55px" }} />
                   <img src="./static/icons/notifybtn.png" alt="" height={"40px"} style={{ margin: "0px 5px 0px 5px" }} />
                   <img src="./static/icons/logout.png" alt="" height={"40px"}
                     style={{ margin: "0px 5px 0px 5px" }}
